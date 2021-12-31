@@ -1,0 +1,58 @@
+body {
+	background: rgb(255, 250, 241);
+	width: 95vw;
+	height: 90vh;
+}
+
+.wrapper {
+	margin: 30px 150px 10px;
+	height: 88vh;
+	background-color: hsl(223, 19%, 93%);
+	position: relative;
+
+	.container {
+		height: 90%;
+		position: relative;
+		top: 40px;
+		left: 250px;
+		width: 590px;
+
+		.comment_section {
+			border: 1px solid blue;
+			position: absolute;
+			top: 80%;
+			width: 100%;
+			height: 120px;
+			background-color: hsl(228, 33%, 97%);
+			display: flex;
+			border-radius: 5px;
+
+			#ig {
+				position: relative;
+				width: 40px;
+				height: 40px;
+				left: 15px;
+				top: 10px;
+			}
+
+			#comms {
+				margin-left: 25px;
+				margin-top: 10px;
+				width: 400px;
+				height: 80px;
+				border-radius: 5px;
+			}
+
+			#hit {
+				position: relative;
+				left: 10px;
+				background-color: hsl(238, 40%, 52%);
+				width: 80px;
+				height: 40px;
+				border-radius: 7px;
+				bottom: 50%;
+				color: white;
+			}
+		}
+	}
+}

@@ -1,0 +1,61 @@
+body {
+  background: #fffaf1;
+  width: 95vw;
+  height: 90vh;
+}
+
+.wrapper {
+  margin: 30px 150px 10px;
+  height: 88vh;
+  background-color: #eaecf1;
+  position: relative;
+}
+
+.wrapper .container {
+  height: 90%;
+  position: relative;
+  top: 40px;
+  left: 250px;
+  width: 590px;
+}
+
+.wrapper .container .comment_section {
+  border: 1px solid blue;
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  height: 120px;
+  background-color: #f5f6fa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 5px;
+}
+
+.wrapper .container .comment_section #ig {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  left: 15px;
+  top: 10px;
+}
+
+.wrapper .container .comment_section #comms {
+  margin-left: 25px;
+  margin-top: 10px;
+  width: 400px;
+  height: 80px;
+  border-radius: 5px;
+}
+
+.wrapper .container .comment_section #hit {
+  position: relative;
+  left: 10px;
+  background-color: #5457b6;
+  width: 80px;
+  height: 40px;
+  border-radius: 7px;
+  bottom: 50%;
+  color: white;
+}
+/*# sourceMappingURL=index.css.map */
