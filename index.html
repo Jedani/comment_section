@@ -4,6 +4,12 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<!-- displays site properly based on user's device -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Rubik:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
 
 		<link
 			rel="icon"
@@ -20,15 +26,36 @@
 
 		<div class="wrapper">
 			<div class="container">
+				<div class="dynamic">
+					<div class="topTwo">
+						<div class="first">
+							<div class="topStuff">
+								<img id="user" src="" alt="amy" />
+								<p id="name"><div id="dit"><p id='dits'></p></div> </p>
+								<img id="svg" src="./images/icon-reply.svg" alt="reply" />
+								<a href="">Reply</a>
+							</div>
+							<div class="counter">
+								<img src="./images/icon-plus.svg" alt="" />
+								<img id="min" src="./images/icon-minus.svg" alt="" />
+							</div>
+							<div class="coments"></div>
+						</div>
+						<div class="second"></div>
+					</div>
+					<div class="bottomTwo">
+						<div class="third"></div>
+						<div class="fourth"></div>
+					</div>
+				</div>
 				<div class="comment_section">
-					<img
-						id="ig"
-						src="./images/avatars/image-juliusomo.png"
-						alt="julius"
-					/>
+					<img id="ig" src="" alt="julius" />
 					<form>
-						<textarea name="" id="comms" placeholder="Add a comment...">
-						</textarea>
+						<textarea
+							name="comments"
+							id="comms"
+							placeholder="Add a comment..."
+						></textarea>
 						<input id="hit" type="submit" value="SEND" />
 					</form>
 				</div>

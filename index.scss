@@ -1,7 +1,42 @@
+@mixin commentCard {
+	width: 100%;
+	height: 120px;
+	margin: 10px 0px;
+	background-color: white;
+	border-radius: 5px;
+}
+
+@mixin imgs {
+	img {
+		height: 30px;
+		width: 30px;
+		margin: 5px 10px;
+	}
+
+	#svg {
+		margin-left: 30%;
+		height: 15px;
+		width: 15px;
+		margin-top: 12px;
+	}
+	p {
+		position: relative;
+		bottom: 7px;
+	}
+	a {
+		margin-top: 10px;
+		text-align: center;
+		text-decoration: none;
+		font-size: large;
+	}
+}
+
 body {
 	background: rgb(255, 250, 241);
 	width: 95vw;
 	height: 90vh;
+	font-family: "Rubik", sans-serif;
+	font-size: 16px;
 }
 
 .wrapper {
@@ -9,6 +44,7 @@ body {
 	height: 88vh;
 	background-color: hsl(223, 19%, 93%);
 	position: relative;
+	width: 1100px;
 
 	.container {
 		height: 90%;
@@ -17,12 +53,71 @@ body {
 		left: 250px;
 		width: 590px;
 
+		.dynamic {
+			position: absolute;
+			width: 98%;
+			height: 450px;
+
+			.topTwo {
+				height: 50%;
+
+				.first {
+					@include commentCard;
+
+					.topStuff {
+						height: 40px;
+						margin-left: 60px;
+						display: flex;
+						@include imgs;
+
+						#dit {
+							margin-left: 10px;
+							width: 100px;
+							font-weight: lighter;
+							padding-bottom: 7px;
+							color: hsl(239, 57%, 85%);
+						}
+					}
+
+					.counter {
+						position: absolute;
+						width: 30px;
+						height: 70px;
+						top: 25px;
+						left: 20px;
+						border-radius: 10px;
+						display: flex;
+						flex-direction: column;
+						background-color: hsl(228, 33%, 97%);
+
+						img {
+							width: 40%;
+							margin: 30%;
+						}
+						#min {
+							margin-top: 30px;
+						}
+					}
+
+					.coments {
+						margin-left: 70px;
+						height: 60px;
+						margin-right: 15px;
+					}
+				}
+			}
+			.bottomTwo {
+				height: 47%;
+				margin-left: 40px;
+				border-left: 1px solid black;
+			}
+		}
+
 		.comment_section {
-			border: 1px solid blue;
 			position: absolute;
 			top: 80%;
 			width: 100%;
-			height: 120px;
+			height: 100px;
 			background-color: hsl(228, 33%, 97%);
 			display: flex;
 			border-radius: 5px;
@@ -36,11 +131,13 @@ body {
 			}
 
 			#comms {
+				font-family: "Rubik", sans-serif;
 				margin-left: 25px;
 				margin-top: 10px;
 				width: 400px;
-				height: 80px;
 				border-radius: 5px;
+				height: 50px;
+				padding: 10px;
 			}
 
 			#hit {
@@ -50,8 +147,8 @@ body {
 				width: 80px;
 				height: 40px;
 				border-radius: 7px;
-				bottom: 50%;
 				color: white;
+				bottom: 50%;
 			}
 		}
 	}
