@@ -20,6 +20,7 @@ function one() {
 					data.comments[0].createdAt),
 				(document.querySelector(".coments").innerText =
 					data.comments[0].content),
+				(document.querySelector(".count").innerText = data.comments[0].score),
 			),
 		);
 }

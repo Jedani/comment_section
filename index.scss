@@ -90,12 +90,18 @@ body {
 						flex-direction: column;
 						background-color: hsl(228, 33%, 97%);
 
+						.count {
+							height: 30px;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+						}
 						img {
 							width: 40%;
 							margin: 30%;
-						}
-						#min {
-							margin-top: 30px;
+							&:hover {
+								cursor: pointer;
+							}
 						}
 					}
 

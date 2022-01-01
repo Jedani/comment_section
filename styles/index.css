@@ -98,13 +98,26 @@ body {
   background-color: #f5f6fa;
 }
 
+.wrapper .container .dynamic .topTwo .first .counter .count {
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .wrapper .container .dynamic .topTwo .first .counter img {
   width: 40%;
   margin: 30%;
 }
 
-.wrapper .container .dynamic .topTwo .first .counter #min {
-  margin-top: 30px;
+.wrapper .container .dynamic .topTwo .first .counter img:hover {
+  cursor: pointer;
 }
 
 .wrapper .container .dynamic .topTwo .first .coments {
