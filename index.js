@@ -27,4 +27,13 @@ function one() {
 }
 one();
 
+const content = document.querySelector(".open");
 const reply = document.querySelector("#reply");
+reply.onclick = function () {
+	if (content.className == "open") {
+		// shrink
+		content.className = "onReply";
+	} else {
+		content.className = "open";
+	}
+};

@@ -79,7 +79,7 @@ body {
 			height: 450px;
 
 			.topTwo {
-				height: 50%;
+				height: fit-content;
 
 				.first {
 					@include commentCard;
@@ -136,19 +136,24 @@ body {
 					}
 				}
 
+				.open {
+					visibility: hidden;
+				}
+
 				.onReply {
 					margin-top: -5px;
 					display: flex;
 					background-color: white;
 					border-radius: 3px;
+					height: max-content;
 
 					#comms {
 						@include comment;
 					}
 
 					img {
-						height: 30px;
-						width: 30px;
+						height: 35px;
+						width: 35px;
 						margin: 5px 10px;
 					}
 
