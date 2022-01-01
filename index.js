@@ -1,9 +1,10 @@
 function addImage() {
 	fetch("data.json")
 		.then((resp) => resp.json())
-		.then(
-			(data) =>
+		.then((data) =>
+			(document.querySelector("#res").src = data.currentUser.image.png)(
 				(document.querySelector("#ig").src = data.currentUser.image.png),
+			),
 		);
 }
 addImage();
@@ -25,3 +26,5 @@ function one() {
 		);
 }
 one();
+
+const reply = document.querySelector("#reply");

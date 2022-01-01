@@ -1,6 +1,6 @@
 @mixin commentCard {
 	width: 100%;
-	height: 120px;
+	height: max-content;
 	margin: 10px 0px;
 	background-color: white;
 	border-radius: 5px;
@@ -29,6 +29,26 @@
 		text-decoration: none;
 		font-size: large;
 	}
+}
+
+@mixin button {
+	position: relative;
+	left: 10px;
+	background-color: hsl(238, 40%, 52%);
+	width: 80px;
+	height: 40px;
+	border-radius: 7px;
+	color: white;
+	bottom: 50%;
+}
+
+@mixin comment {
+	font-family: "Rubik", sans-serif;
+	margin-top: 10px;
+	width: 400px;
+	border-radius: 5px;
+	height: 50px;
+	padding: 10px;
 }
 
 body {
@@ -110,6 +130,31 @@ body {
 						height: 60px;
 						margin-right: 15px;
 					}
+
+					.spacer {
+						height: 10px;
+					}
+				}
+
+				.onReply {
+					margin-top: -5px;
+					display: flex;
+					background-color: white;
+					border-radius: 3px;
+
+					#comms {
+						@include comment;
+					}
+
+					img {
+						height: 30px;
+						width: 30px;
+						margin: 5px 10px;
+					}
+
+					#hitReply {
+						@include button;
+					}
 				}
 			}
 			.bottomTwo {
@@ -137,24 +182,12 @@ body {
 			}
 
 			#comms {
-				font-family: "Rubik", sans-serif;
+				@include comment;
 				margin-left: 25px;
-				margin-top: 10px;
-				width: 400px;
-				border-radius: 5px;
-				height: 50px;
-				padding: 10px;
 			}
 
 			#hit {
-				position: relative;
-				left: 10px;
-				background-color: hsl(238, 40%, 52%);
-				width: 80px;
-				height: 40px;
-				border-radius: 7px;
-				color: white;
-				bottom: 50%;
+				@include button;
 			}
 		}
 	}

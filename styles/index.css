@@ -34,7 +34,9 @@ body {
 
 .wrapper .container .dynamic .topTwo .first {
   width: 100%;
-  height: 120px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   margin: 10px 0px;
   background-color: white;
   border-radius: 5px;
@@ -126,6 +128,45 @@ body {
   margin-right: 15px;
 }
 
+.wrapper .container .dynamic .topTwo .first .spacer {
+  height: 10px;
+}
+
+.wrapper .container .dynamic .topTwo .onReply {
+  margin-top: -5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.wrapper .container .dynamic .topTwo .onReply #comms {
+  font-family: "Rubik", sans-serif;
+  margin-top: 10px;
+  width: 400px;
+  border-radius: 5px;
+  height: 50px;
+  padding: 10px;
+}
+
+.wrapper .container .dynamic .topTwo .onReply img {
+  height: 30px;
+  width: 30px;
+  margin: 5px 10px;
+}
+
+.wrapper .container .dynamic .topTwo .onReply #hitReply {
+  position: relative;
+  left: 10px;
+  background-color: #5457b6;
+  width: 80px;
+  height: 40px;
+  border-radius: 7px;
+  color: white;
+  bottom: 50%;
+}
+
 .wrapper .container .dynamic .bottomTwo {
   height: 47%;
   margin-left: 40px;
@@ -154,12 +195,12 @@ body {
 
 .wrapper .container .comment_section #comms {
   font-family: "Rubik", sans-serif;
-  margin-left: 25px;
   margin-top: 10px;
   width: 400px;
   border-radius: 5px;
   height: 50px;
   padding: 10px;
+  margin-left: 25px;
 }
 
 .wrapper .container .comment_section #hit {
