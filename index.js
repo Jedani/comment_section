@@ -16,21 +16,23 @@ function main(data) {
 
 		commentNode.insertAdjacentHTML(
 			"beforeend",
-			`	<div class="first" id='${element.id}'>
-					<div class="counter">
-						<img src="./images/icon-plus.svg" alt="" />
-						<div class="count">'${element.score}'</div>
-						<img  src="./images/icon-minus.svg" alt="" />
+			`	<div class="first" id=${element.id}>
+					<div class="houser">
+						<div class="counter">
+							<img src="./images/icon-plus.svg" alt="" />
+							<div class="count">${element.score}</div>
+							<img  src="./images/icon-minus.svg" alt="" />
+						</div>
 					</div>
 					<div class="topStuff" >
-					<img id="user" src="" alt="amy" />
-						<p id="name"></p>
-						<div id="dit"><p id="dits"></p></div>
+					<img src=${element.user.image.png} alt="amy" />
+						<p >${element.user.username}</p>
+						<div id="dit"><p>${element.createdAt}</p></div>
 						<img id="svg" src="./images/icon-reply.svg" alt="reply" />
 						<a href="#" id="reply">Reply</a>
 					</div>
 			
-			<div class="coments"></div>
+			<div class="coments">${element.content}</div>
 			<div class="spacer"></div>`,
 		);
 	});

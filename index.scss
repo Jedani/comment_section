@@ -5,6 +5,34 @@
 	background-color: white;
 	border-radius: 5px;
 
+	.houser {
+		position: absolute;
+		width: 60px;
+		.counter {
+			position: relative;
+			width: 30px;
+			height: 70px;
+			left: 15px;
+			top: 15px;
+			border-radius: 10px;
+			background-color: hsl(228, 33%, 97%);
+
+			.count {
+				height: 15px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			img {
+				width: 40%;
+				margin: 30%;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
 	.topStuff {
 		height: 40px;
 		margin-left: 60px;
@@ -23,7 +51,7 @@
 	.coments {
 		margin-left: 70px;
 		height: fit-content;
-		margin-right: 15px;
+		margin-right: 10px;
 	}
 
 	.spacer {
@@ -112,32 +140,6 @@ ul {
 
 				.first {
 					@include commentCard;
-
-					.counter {
-						position: absolute;
-						width: 30px;
-						height: 70px;
-						top: 25px;
-						left: 15px;
-						border-radius: 10px;
-						display: flex;
-						flex-direction: column;
-						background-color: hsl(228, 33%, 97%);
-
-						.count {
-							height: 30px;
-							display: flex;
-							align-items: center;
-							justify-content: center;
-						}
-						img {
-							width: 40%;
-							margin: 30%;
-							&:hover {
-								cursor: pointer;
-							}
-						}
-					}
 				}
 
 				.open {
@@ -164,10 +166,6 @@ ul {
 							@include button;
 						}
 					}
-				}
-
-				.second {
-					@include commentCard;
 				}
 			}
 			.bottomTwo {

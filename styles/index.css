@@ -48,6 +48,43 @@ ul {
   border-radius: 5px;
 }
 
+.wrapper .container .dynamic .topTwo .first .houser {
+  position: absolute;
+  width: 60px;
+}
+
+.wrapper .container .dynamic .topTwo .first .houser .counter {
+  position: relative;
+  width: 30px;
+  height: 70px;
+  left: 15px;
+  top: 15px;
+  border-radius: 10px;
+  background-color: #f5f6fa;
+}
+
+.wrapper .container .dynamic .topTwo .first .houser .counter .count {
+  height: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .container .dynamic .topTwo .first .houser .counter img {
+  width: 40%;
+  margin: 30%;
+}
+
+.wrapper .container .dynamic .topTwo .first .houser .counter img:hover {
+  cursor: pointer;
+}
+
 .wrapper .container .dynamic .topTwo .first .topStuff {
   height: 40px;
   margin-left: 60px;
@@ -94,50 +131,11 @@ ul {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 .wrapper .container .dynamic .topTwo .first .spacer {
   height: 10px;
-}
-
-.wrapper .container .dynamic .topTwo .first .counter {
-  position: absolute;
-  width: 30px;
-  height: 70px;
-  top: 25px;
-  left: 15px;
-  border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #f5f6fa;
-}
-
-.wrapper .container .dynamic .topTwo .first .counter .count {
-  height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.wrapper .container .dynamic .topTwo .first .counter img {
-  width: 40%;
-  margin: 30%;
-}
-
-.wrapper .container .dynamic .topTwo .first .counter img:hover {
-  cursor: pointer;
 }
 
 .wrapper .container .dynamic .topTwo .open {
@@ -180,69 +178,6 @@ ul {
   border-radius: 7px;
   color: white;
   bottom: 50%;
-}
-
-.wrapper .container .dynamic .topTwo .second {
-  width: 100%;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  margin: 10px 0px;
-  background-color: white;
-  border-radius: 5px;
-}
-
-.wrapper .container .dynamic .topTwo .second .topStuff {
-  height: 40px;
-  margin-left: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.wrapper .container .dynamic .topTwo .second .topStuff img {
-  height: 30px;
-  width: 30px;
-  margin: 5px 10px;
-}
-
-.wrapper .container .dynamic .topTwo .second .topStuff #svg {
-  margin-left: 30%;
-  height: 15px;
-  width: 15px;
-  margin-top: 12px;
-}
-
-.wrapper .container .dynamic .topTwo .second .topStuff p {
-  position: relative;
-  bottom: 7px;
-}
-
-.wrapper .container .dynamic .topTwo .second .topStuff a {
-  margin-top: 10px;
-  text-align: center;
-  text-decoration: none;
-  font-size: large;
-}
-
-.wrapper .container .dynamic .topTwo .second .topStuff #dit {
-  margin-left: 10px;
-  width: 100px;
-  font-weight: lighter;
-  padding-bottom: 7px;
-  color: #c3c4ef;
-}
-
-.wrapper .container .dynamic .topTwo .second .coments {
-  margin-left: 70px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin-right: 15px;
-}
-
-.wrapper .container .dynamic .topTwo .second .spacer {
-  height: 10px;
 }
 
 .wrapper .container .dynamic .bottomTwo {
