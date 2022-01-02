@@ -4,68 +4,34 @@ fetch("data.json")
 
 function main(data) {
 	const comments = data.comments;
+	const commentNode = document.getElementById("topDawg");
 	console.log(comments);
 	console.log(data);
+	console.log(commentNode);
 
 	function checker(currentUser, user, id) {}
 
 	comments.forEach((element) => {
 		checker(data.currentUser.username, element.user.username, element.id);
+
+		commentNode.insertAdjacentHTML(
+			"beforeend",
+			`	<div class="first" id='${element.id}'>
+					<div class="counter">
+						<img src="./images/icon-plus.svg" alt="" />
+						<div class="count">'${element.score}'</div>
+						<img  src="./images/icon-minus.svg" alt="" />
+					</div>
+					<div class="topStuff" >
+					<img id="user" src="" alt="amy" />
+						<p id="name"></p>
+						<div id="dit"><p id="dits"></p></div>
+						<img id="svg" src="./images/icon-reply.svg" alt="reply" />
+						<a href="#" id="reply">Reply</a>
+					</div>
+			
+			<div class="coments"></div>
+			<div class="spacer"></div>`,
+		);
 	});
-
-	fetch("data.json")
-		.then((resp) => resp.json())
-		.then((data) => {
-			let cont = document.querySelector(".first");
-			if (cont.className == "first") {
-				(document.querySelector("#user").src = data.comments[0].user.image.png),
-					(document.querySelector("#name").innerText =
-						data.comments[0].user.username),
-					(document.querySelector("#dits").innerText =
-						data.comments[0].createdAt),
-					(document.querySelector(".coments").innerText =
-						data.comments[0].content),
-					(document.querySelector(".count").innerText = data.comments[0].score);
-			}
-			let sec = document.querySelector(".second");
-			if (sec.className == "second") {
-				(document.querySelector("#user").src = data.comments[1].user.image.png),
-					(document.querySelector("#name").innerText =
-						data.comments[1].user.username),
-					(document.querySelector("#dits").innerText =
-						data.comments[1].createdAt),
-					(document.querySelector(".coments").innerText =
-						data.comments[1].content),
-					(document.querySelector(".count").innerText = data.comments[1].score);
-			}
-		});
 }
-
-// function two() {
-// 	fetch("data.json")
-// 		.then((resp) => resp.json())
-// 		.then((data) => {
-
-// }
-// two();
-
-const content = document.querySelector(".open");
-const reply = document.querySelector("#reply");
-reply.onclick = function () {
-	if (content.className == "open") {
-		// shrink
-		content.className = "onReply";
-	} else {
-		content.className = "open";
-	}
-};
-
-const up = document.querySelector("#max");
-const down = document.querySelector("#min");
-let val = document.querySelector(".count").innerText;
-up.onclick = function () {
-	console.log(val);
-};
-down.onclick = function () {
-	alert("me");
-};
