@@ -6,6 +6,12 @@ body {
   font-size: 16px;
 }
 
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
 .wrapper {
   margin: 30px 150px 10px;
   height: 88vh;
@@ -15,17 +21,15 @@ body {
 }
 
 .wrapper .container {
-  height: 90%;
   position: relative;
-  top: 40px;
+  height: 100%;
+  top: 20px;
   left: 250px;
   width: 590px;
 }
 
 .wrapper .container .dynamic {
   position: absolute;
-  width: 98%;
-  height: 450px;
 }
 
 .wrapper .container .dynamic .topTwo {
@@ -90,7 +94,7 @@ body {
   width: 30px;
   height: 70px;
   top: 25px;
-  left: 20px;
+  left: 15px;
   border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -126,7 +130,9 @@ body {
 
 .wrapper .container .dynamic .topTwo .first .coments {
   margin-left: 70px;
-  height: 60px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin-right: 15px;
 }
 
@@ -138,19 +144,19 @@ body {
   visibility: hidden;
 }
 
-.wrapper .container .dynamic .topTwo .onReply {
+.wrapper .container .dynamic .topTwo .open .onReply {
   margin-top: -5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-color: white;
   border-radius: 3px;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
-.wrapper .container .dynamic .topTwo .onReply #comms {
+.wrapper .container .dynamic .topTwo .open .onReply #comms {
   font-family: "Rubik", sans-serif;
   margin-top: 10px;
   width: 400px;
@@ -159,13 +165,13 @@ body {
   padding: 10px;
 }
 
-.wrapper .container .dynamic .topTwo .onReply img {
-  height: 35px;
-  width: 35px;
-  margin: 5px 10px;
+.wrapper .container .dynamic .topTwo .open .onReply img {
+  height: 32px;
+  width: 32px;
+  margin: 5px 15px;
 }
 
-.wrapper .container .dynamic .topTwo .onReply #hitReply {
+.wrapper .container .dynamic .topTwo .open .onReply #hitReply {
   position: relative;
   left: 10px;
   background-color: #5457b6;
@@ -176,10 +182,112 @@ body {
   bottom: 50%;
 }
 
+.wrapper .container .dynamic .topTwo .second {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 10px 0px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.wrapper .container .dynamic .topTwo .second .topStuff {
+  height: 40px;
+  margin-left: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .container .dynamic .topTwo .second .topStuff img {
+  height: 30px;
+  width: 30px;
+  margin: 5px 10px;
+}
+
+.wrapper .container .dynamic .topTwo .second .topStuff #svg {
+  margin-left: 30%;
+  height: 15px;
+  width: 15px;
+  margin-top: 12px;
+}
+
+.wrapper .container .dynamic .topTwo .second .topStuff p {
+  position: relative;
+  bottom: 7px;
+}
+
+.wrapper .container .dynamic .topTwo .second .topStuff a {
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: large;
+}
+
+.wrapper .container .dynamic .topTwo .second .topStuff #dit {
+  margin-left: 10px;
+  width: 100px;
+  font-weight: lighter;
+  padding-bottom: 7px;
+  color: #c3c4ef;
+}
+
+.wrapper .container .dynamic .topTwo .second .counter {
+  position: absolute;
+  width: 30px;
+  height: 70px;
+  top: 25px;
+  left: 15px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #f5f6fa;
+}
+
+.wrapper .container .dynamic .topTwo .second .counter .count {
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .container .dynamic .topTwo .second .counter img {
+  width: 40%;
+  margin: 30%;
+}
+
+.wrapper .container .dynamic .topTwo .second .counter img:hover {
+  cursor: pointer;
+}
+
+.wrapper .container .dynamic .topTwo .second .coments {
+  margin-left: 70px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-right: 15px;
+}
+
+.wrapper .container .dynamic .topTwo .second .spacer {
+  height: 10px;
+}
+
 .wrapper .container .dynamic .bottomTwo {
+  border: solid black;
   height: 47%;
   margin-left: 40px;
-  border-left: 1px solid black;
 }
 
 .wrapper .container .comment_section {
