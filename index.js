@@ -34,15 +34,21 @@ function main(data) {
 
 	function checker(currentUser, user, id) {
 		if (currentUser == user) {
-			// optional = `<span class="reply-btn">
-			// 					  <span class="delete" onclick="deleteComment('com${comId}')"><img src="images/icon-delete.svg" alt="Delete"> Delete</span>
-			// 					  <span class="edit" onclick="editComment(${comId})"><img src="images/icon-edit.svg" alt="Edit"> Edit</span>
-			// 					  </span>`;
-			// you = '<span class="you">you</span>';
-			// } else {
-			// 	options = `<span class="reply-btn" onclick="showReplyBox('${writer}','${data.currentUser.image.png}','com${comId}')">
-			// 					  <img src="./images/icon-reply.svg" alt="Reply"> <strong>Reply</strong>`;
-			// 	youSpan = "";
+			optional = `
+				<div class="delete">
+					<img  src="./images/icon-delete.svg" alt="" />
+					<p id="red"><strong>Delete</strong></p>
+				</div>
+				<div class="edit">
+					<img  src="./images/icon-edit.svg" alt="" />
+					<p id="blue"><strong>Edit</strong></p>
+				</div>
+				`;
+			you = '<div class="you">you</div>';
+		} else {
+			optional = `<span class="reply-btn" onclick="showReplyBox('${writer}','${data.currentUser.image.png}','com${comId}')">
+							<img id="svg" src="./images/icon-reply.svg" alt="reply" /> <strong>Reply</strong>`;
+			you = "";
 		}
 	}
 
@@ -63,7 +69,7 @@ function main(data) {
 					<img src=${element.user.image.png} alt="amy" />
 						<p ><strong>${element.user.username}</strong></p>
 						<div id="dit"><p>${element.createdAt}</p></div>
-						<img id="svg" src="./images/icon-reply.svg" alt="reply" />
+						<div>${optional}</div>
 						<a href="#" id="reply">Reply</a>
 					</div>
 			
@@ -87,10 +93,9 @@ function main(data) {
 						</div>
 						<div class="topStuff" >
 								<img src=${reply.user.image.png} alt="amy" />
-									<p ><strong>${reply.user.username}</strong></p>
+									<p ><strong>${reply.user.username}</strong> ${you}</p>
 									<div id="dit"><p>${reply.createdAt}</p></div>
-									<img id="svg" src="./images/icon-reply.svg" alt="reply" />
-									<a href="#" id="reply">Reply</a>
+									<div class="options">${optional}</div>
 						</div>
 					
 						<div class="coments">${reply.content}</div>
