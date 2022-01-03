@@ -35,6 +35,7 @@ function main(data) {
 	function checker(currentUser, user, id) {
 		if (currentUser == user) {
 			optional = `
+			<div class="options">
 				<div class="delete">
 					<img  src="./images/icon-delete.svg" alt="" />
 					<p id="red"><strong>Delete</strong></p>
@@ -43,11 +44,16 @@ function main(data) {
 					<img  src="./images/icon-edit.svg" alt="" />
 					<p id="blue"><strong>Edit</strong></p>
 				</div>
+			</div>
 				`;
 			you = '<div class="you">you</div>';
 		} else {
-			optional = `<span class="reply-btn" onclick="showReplyBox('${writer}','${data.currentUser.image.png}','com${comId}')">
-							<img id="svg" src="./images/icon-reply.svg" alt="reply" /> <strong>Reply</strong>`;
+			optional = `
+			<div class="option"  >
+				<img id="svg" src="./images/icon-reply.svg" alt="reply" onclick="alert('me')"/> 
+				<p onclick="showReplyBox('${user}','${data.currentUser.image.png}','${id}')"><strong>Reply</strong></p>
+			</div>`;
+
 			you = "";
 		}
 	}
@@ -69,8 +75,7 @@ function main(data) {
 					<img src=${element.user.image.png} alt="amy" />
 						<p ><strong>${element.user.username}</strong></p>
 						<div id="dit"><p>${element.createdAt}</p></div>
-						<div>${optional}</div>
-						<a href="#" id="reply">Reply</a>
+						${optional}
 					</div>
 			
 			<div class="coments">${element.content}</div>
@@ -95,7 +100,7 @@ function main(data) {
 								<img src=${reply.user.image.png} alt="amy" />
 									<p ><strong>${reply.user.username}</strong> ${you}</p>
 									<div id="dit"><p>${reply.createdAt}</p></div>
-									<div class="options">${optional}</div>
+									${optional}
 						</div>
 					
 						<div class="coments">${reply.content}</div>

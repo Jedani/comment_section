@@ -40,7 +40,7 @@
 		@include imgs;
 
 		#dit {
-			width: 170px;
+			width: 200px;
 			font-weight: lighter;
 			padding-bottom: 7px;
 			color: hsl(239, 57%, 85%);
@@ -57,7 +57,23 @@
 			background: hsl(238, 40%, 52%);
 			color: white;
 		}
-
+		.option {
+			display: flex;
+			align-items: center;
+			justify-content: end;
+			width: stretch;
+			margin-right: 40px;
+			cursor: pointer;
+			p {
+				color: hsl(238, 40%, 52%);
+			}
+			#svg {
+				height: 12px;
+				width: 12px;
+				margin-top: 15px;
+				margin-right: -9px;
+			}
+		}
 		.options {
 			display: flex;
 			align-items: center;
@@ -73,6 +89,7 @@
 			.delete {
 				display: flex;
 				align-items: center;
+				cursor: pointer;
 				#red {
 					color: hsl(358, 79%, 66%);
 				}
@@ -81,6 +98,7 @@
 				display: flex;
 				align-items: center;
 				margin-left: 16px;
+				cursor: pointer;
 				#blue {
 					color: hsl(238, 40%, 52%);
 				}
