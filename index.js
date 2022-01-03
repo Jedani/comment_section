@@ -5,21 +5,21 @@ fetch("data.json")
 function showReply(replyTo, currentUser, id) {
 	const commmentContainer = document.getElementById(id);
 	const hiddenBox = document.getElementById("hidden");
-	console.log(hiddenBox);
 
 	if (hiddenBox) {
 		hiddenBox.parentNode.removeChild(hiddenBox);
-	}
-	commmentContainer.insertAdjacentHTML(
-		"afterend",
-		`<div class="onReply" id='hidden'>
-				<img id="res" src="" alt="julius" />
+	} else {
+		commmentContainer.insertAdjacentHTML(
+			"afterend",
+			`<div class="onReply" id='hidden'>
+				<img id="res" src=${currentUser} alt="julius" />
 				<form>
-					<textarea name="comments" id="comms"></textarea>
+					<textarea name="comments" id="comms">@${replyTo}</textarea>
 					<input id="hitReply" type="submit" value="REPLY" />
 				</form>
 			</div>`,
-	);
+		);
+	}
 }
 
 function main(data) {
@@ -50,8 +50,8 @@ function main(data) {
 		} else {
 			optional = `
 			<div class="option"  >
-				<img id="svg" src="./images/icon-reply.svg" alt="reply" onclick="alert('me')"/> 
-				<p onclick="showReplyBox('${user}','${data.currentUser.image.png}','${id}')"><strong>Reply</strong></p>
+				<img id="svg" src="./images/icon-reply.svg" alt="reply"/> 
+				<p onclick="showReply('${user}','${data.currentUser.image.png}','${id}')"><strong>Reply</strong></p>
 			</div>`;
 
 			you = "";
