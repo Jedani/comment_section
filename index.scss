@@ -34,14 +34,14 @@
 	}
 
 	.topStuff {
-		height: 40px;
+		height: 50px;
 		margin-left: 60px;
 		display: flex;
 		@include imgs;
 
 		#dit {
 			margin-left: 10px;
-			width: 100px;
+			width: 170px;
 			font-weight: lighter;
 			padding-bottom: 7px;
 			color: hsl(239, 57%, 85%);
@@ -63,23 +63,25 @@
 	img {
 		height: 30px;
 		width: 30px;
-		margin: 5px 10px;
+		margin: 5px;
+		margin-top: 15px;
 	}
 
 	#svg {
 		margin-left: 30%;
 		height: 15px;
 		width: 15px;
-		margin-top: 12px;
+		margin-top: 22px;
 	}
 	p {
 		position: relative;
-		bottom: 7px;
+		bottom: -4px;
+		margin-left: 15px;
 	}
 	a {
-		margin-top: 10px;
-		text-align: center;
+		margin-top: 20px;
 		text-decoration: none;
+		font-weight: bold;
 		font-size: large;
 	}
 }
@@ -98,9 +100,9 @@
 @mixin comment {
 	font-family: "Rubik", sans-serif;
 	margin-top: 10px;
-	width: 400px;
+	width: 500px;
 	border-radius: 5px;
-	height: 50px;
+	height: 60px;
 	padding: 10px;
 }
 
@@ -129,12 +131,10 @@ ul {
 		position: relative;
 		height: 100%;
 		top: 20px;
-		left: 250px;
-		width: 590px;
+		left: 200px;
+		width: 700px;
 
 		.dynamic {
-			position: absolute;
-
 			.topTwo {
 				height: fit-content;
 
@@ -142,36 +142,39 @@ ul {
 					@include commentCard;
 				}
 
-				.open {
-					visibility: hidden;
+				.onReply {
+					margin-top: -5px;
+					display: flex;
+					background-color: white;
+					border-radius: 3px;
+					height: fit-content;
 
-					.onReply {
-						margin-top: -5px;
-						display: flex;
-						background-color: white;
-						border-radius: 3px;
-						height: fit-content;
+					#comms {
+						@include comment;
+					}
 
-						#comms {
-							@include comment;
-						}
+					img {
+						height: 32px;
+						width: 32px;
+						margin: 5px 15px;
+					}
 
-						img {
-							height: 32px;
-							width: 32px;
-							margin: 5px 15px;
-						}
-
-						#hitReply {
-							@include button;
-						}
+					#hitReply {
+						@include button;
 					}
 				}
 			}
 			.bottomTwo {
-				border: solid black;
-				height: 47%;
-				margin-left: 40px;
+				height: 250px;
+				margin-left: 32px;
+				border-left: ridge;
+
+				.second {
+					@include commentCard;
+					margin-top: 0px;
+					margin-left: 30px;
+					width: fit-content;
+				}
 			}
 		}
 		.comment_section {

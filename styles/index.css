@@ -24,12 +24,8 @@ ul {
   position: relative;
   height: 100%;
   top: 20px;
-  left: 250px;
-  width: 590px;
-}
-
-.wrapper .container .dynamic {
-  position: absolute;
+  left: 200px;
+  width: 700px;
 }
 
 .wrapper .container .dynamic .topTwo {
@@ -86,7 +82,7 @@ ul {
 }
 
 .wrapper .container .dynamic .topTwo .first .topStuff {
-  height: 40px;
+  height: 50px;
   margin-left: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -96,31 +92,33 @@ ul {
 .wrapper .container .dynamic .topTwo .first .topStuff img {
   height: 30px;
   width: 30px;
-  margin: 5px 10px;
+  margin: 5px;
+  margin-top: 15px;
 }
 
 .wrapper .container .dynamic .topTwo .first .topStuff #svg {
   margin-left: 30%;
   height: 15px;
   width: 15px;
-  margin-top: 12px;
+  margin-top: 22px;
 }
 
 .wrapper .container .dynamic .topTwo .first .topStuff p {
   position: relative;
-  bottom: 7px;
+  bottom: -4px;
+  margin-left: 15px;
 }
 
 .wrapper .container .dynamic .topTwo .first .topStuff a {
-  margin-top: 10px;
-  text-align: center;
+  margin-top: 20px;
   text-decoration: none;
+  font-weight: bold;
   font-size: large;
 }
 
 .wrapper .container .dynamic .topTwo .first .topStuff #dit {
   margin-left: 10px;
-  width: 100px;
+  width: 170px;
   font-weight: lighter;
   padding-bottom: 7px;
   color: #c3c4ef;
@@ -138,11 +136,7 @@ ul {
   height: 10px;
 }
 
-.wrapper .container .dynamic .topTwo .open {
-  visibility: hidden;
-}
-
-.wrapper .container .dynamic .topTwo .open .onReply {
+.wrapper .container .dynamic .topTwo .onReply {
   margin-top: -5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -154,22 +148,22 @@ ul {
   height: fit-content;
 }
 
-.wrapper .container .dynamic .topTwo .open .onReply #comms {
+.wrapper .container .dynamic .topTwo .onReply #comms {
   font-family: "Rubik", sans-serif;
   margin-top: 10px;
-  width: 400px;
+  width: 500px;
   border-radius: 5px;
-  height: 50px;
+  height: 60px;
   padding: 10px;
 }
 
-.wrapper .container .dynamic .topTwo .open .onReply img {
+.wrapper .container .dynamic .topTwo .onReply img {
   height: 32px;
   width: 32px;
   margin: 5px 15px;
 }
 
-.wrapper .container .dynamic .topTwo .open .onReply #hitReply {
+.wrapper .container .dynamic .topTwo .onReply #hitReply {
   position: relative;
   left: 10px;
   background-color: #5457b6;
@@ -181,9 +175,116 @@ ul {
 }
 
 .wrapper .container .dynamic .bottomTwo {
-  border: solid black;
-  height: 47%;
-  margin-left: 40px;
+  height: 250px;
+  margin-left: 32px;
+  border-left: ridge;
+}
+
+.wrapper .container .dynamic .bottomTwo .second {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 10px 0px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 0px;
+  margin-left: 30px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.wrapper .container .dynamic .bottomTwo .second .houser {
+  position: absolute;
+  width: 60px;
+}
+
+.wrapper .container .dynamic .bottomTwo .second .houser .counter {
+  position: relative;
+  width: 30px;
+  height: 70px;
+  left: 15px;
+  top: 15px;
+  border-radius: 10px;
+  background-color: #f5f6fa;
+}
+
+.wrapper .container .dynamic .bottomTwo .second .houser .counter .count {
+  height: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .container .dynamic .bottomTwo .second .houser .counter img {
+  width: 40%;
+  margin: 30%;
+}
+
+.wrapper .container .dynamic .bottomTwo .second .houser .counter img:hover {
+  cursor: pointer;
+}
+
+.wrapper .container .dynamic .bottomTwo .second .topStuff {
+  height: 50px;
+  margin-left: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .container .dynamic .bottomTwo .second .topStuff img {
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+  margin-top: 15px;
+}
+
+.wrapper .container .dynamic .bottomTwo .second .topStuff #svg {
+  margin-left: 30%;
+  height: 15px;
+  width: 15px;
+  margin-top: 22px;
+}
+
+.wrapper .container .dynamic .bottomTwo .second .topStuff p {
+  position: relative;
+  bottom: -4px;
+  margin-left: 15px;
+}
+
+.wrapper .container .dynamic .bottomTwo .second .topStuff a {
+  margin-top: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: large;
+}
+
+.wrapper .container .dynamic .bottomTwo .second .topStuff #dit {
+  margin-left: 10px;
+  width: 170px;
+  font-weight: lighter;
+  padding-bottom: 7px;
+  color: #c3c4ef;
+}
+
+.wrapper .container .dynamic .bottomTwo .second .coments {
+  margin-left: 70px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-right: 10px;
+}
+
+.wrapper .container .dynamic .bottomTwo .second .spacer {
+  height: 10px;
 }
 
 .wrapper .container .comment_section {
@@ -209,9 +310,9 @@ ul {
 .wrapper .container .comment_section #comms {
   font-family: "Rubik", sans-serif;
   margin-top: 10px;
-  width: 400px;
+  width: 500px;
   border-radius: 5px;
-  height: 50px;
+  height: 60px;
   padding: 10px;
   margin-left: 25px;
 }
