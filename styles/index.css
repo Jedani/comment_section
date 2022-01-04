@@ -1,40 +1,85 @@
 body {
-  background: #fffaf1;
   width: 95vw;
   height: 90vh;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
-}
-
-ul {
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-}
-
-.wrapper {
-  margin: 30px 150px 10px;
-  height: 88vh;
+  margin: 0;
+  padding: 0;
   background-color: #eaecf1;
-  position: relative;
-  width: 1100px;
 }
 
-.wrapper .container {
-  position: relative;
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s, opacity 0.5s;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.modal .modalHouse {
+  background: whitesmoke;
+  padding: 30px;
+  border-radius: 7px;
+}
+
+.modal .modalHouse .deleter {
+  width: 315px;
+  background-color: whitesmoke;
+}
+
+.modal .modalHouse .deleter .delete-options #no {
+  color: white;
+  background: #5a5c63;
+  width: 150px;
+  border-radius: 6px;
+  height: 40px;
+}
+
+.modal .modalHouse .deleter .delete-options #yes {
+  color: white;
+  background: #ed6468;
+  width: 150px;
+  border-radius: 6px;
+  height: 40px;
+}
+
+.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.container {
   height: 100%;
-  top: 20px;
-  left: 200px;
   width: 700px;
+  border: solid gold;
 }
 
-.wrapper .container .dynamic .topTwo {
+.container .wrapper {
+  border: solid black;
+  height: 550px;
+}
+
+.container .dynamic .topTwo {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
 
-.wrapper .container .dynamic .topTwo .first {
+.container .dynamic .topTwo .first {
   width: 100%;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -44,12 +89,12 @@ ul {
   border-radius: 5px;
 }
 
-.wrapper .container .dynamic .topTwo .first .houser {
+.container .dynamic .topTwo .first .houser {
   position: absolute;
   width: 60px;
 }
 
-.wrapper .container .dynamic .topTwo .first .houser .counter {
+.container .dynamic .topTwo .first .houser .counter {
   position: relative;
   width: 30px;
   height: 70px;
@@ -59,7 +104,7 @@ ul {
   background-color: #f5f6fa;
 }
 
-.wrapper .container .dynamic .topTwo .first .houser .counter .count {
+.container .dynamic .topTwo .first .houser .counter .count {
   height: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -72,16 +117,16 @@ ul {
           justify-content: center;
 }
 
-.wrapper .container .dynamic .topTwo .first .houser .counter img {
+.container .dynamic .topTwo .first .houser .counter img {
   width: 40%;
   margin: 30%;
 }
 
-.wrapper .container .dynamic .topTwo .first .houser .counter img:hover {
+.container .dynamic .topTwo .first .houser .counter img:hover {
   cursor: pointer;
 }
 
-.wrapper .container .dynamic .topTwo .first .topStuff {
+.container .dynamic .topTwo .first .topStuff {
   height: 50px;
   margin-left: 60px;
   display: -webkit-box;
@@ -89,41 +134,41 @@ ul {
   display: flex;
 }
 
-.wrapper .container .dynamic .topTwo .first .topStuff img {
+.container .dynamic .topTwo .first .topStuff img {
   height: 30px;
   width: 30px;
   margin: 5px;
   margin-top: 15px;
 }
 
-.wrapper .container .dynamic .topTwo .first .topStuff #svg {
+.container .dynamic .topTwo .first .topStuff #svg {
   margin-left: 30%;
   height: 15px;
   width: 15px;
   margin-top: 22px;
 }
 
-.wrapper .container .dynamic .topTwo .first .topStuff p {
+.container .dynamic .topTwo .first .topStuff p {
   position: relative;
   bottom: -4px;
   margin-left: 15px;
 }
 
-.wrapper .container .dynamic .topTwo .first .topStuff a {
+.container .dynamic .topTwo .first .topStuff a {
   margin-top: 20px;
   text-decoration: none;
   font-weight: bold;
   font-size: large;
 }
 
-.wrapper .container .dynamic .topTwo .first .topStuff #dit {
+.container .dynamic .topTwo .first .topStuff #dit {
   width: 200px;
   font-weight: lighter;
   padding-bottom: 7px;
   color: #c3c4ef;
 }
 
-.wrapper .container .dynamic .topTwo .first .topStuff .you {
+.container .dynamic .topTwo .first .topStuff .you {
   margin-top: 21px;
   margin-bottom: 10px;
   width: 40px;
@@ -140,7 +185,7 @@ ul {
   color: white;
 }
 
-.wrapper .container .dynamic .topTwo .first .topStuff .option {
+.container .dynamic .topTwo .first .topStuff .option {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,18 +202,18 @@ ul {
   cursor: pointer;
 }
 
-.wrapper .container .dynamic .topTwo .first .topStuff .option p {
+.container .dynamic .topTwo .first .topStuff .option p {
   color: #5457b6;
 }
 
-.wrapper .container .dynamic .topTwo .first .topStuff .option #svg {
+.container .dynamic .topTwo .first .topStuff .option #svg {
   height: 12px;
   width: 12px;
   margin-top: 15px;
   margin-right: -9px;
 }
 
-.wrapper .container .dynamic .topTwo .first .topStuff .options {
+.container .dynamic .topTwo .first .topStuff .options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,16 +222,16 @@ ul {
           align-items: center;
 }
 
-.wrapper .container .dynamic .topTwo .first .topStuff .options img {
+.container .dynamic .topTwo .first .topStuff .options img {
   height: 15px;
   width: 15px;
 }
 
-.wrapper .container .dynamic .topTwo .first .topStuff .options p {
+.container .dynamic .topTwo .first .topStuff .options p {
   margin: 5px;
 }
 
-.wrapper .container .dynamic .topTwo .first .topStuff .options .delete {
+.container .dynamic .topTwo .first .topStuff .options .delete {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,11 +241,11 @@ ul {
   cursor: pointer;
 }
 
-.wrapper .container .dynamic .topTwo .first .topStuff .options .delete #red {
+.container .dynamic .topTwo .first .topStuff .options .delete #red {
   color: #ed6468;
 }
 
-.wrapper .container .dynamic .topTwo .first .topStuff .options .edit {
+.container .dynamic .topTwo .first .topStuff .options .edit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -211,11 +256,11 @@ ul {
   cursor: pointer;
 }
 
-.wrapper .container .dynamic .topTwo .first .topStuff .options .edit #blue {
+.container .dynamic .topTwo .first .topStuff .options .edit #blue {
   color: #5457b6;
 }
 
-.wrapper .container .dynamic .topTwo .first .coments {
+.container .dynamic .topTwo .first .coments {
   margin-left: 70px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -223,11 +268,11 @@ ul {
   margin-right: 10px;
 }
 
-.wrapper .container .dynamic .topTwo .first .spacer {
+.container .dynamic .topTwo .first .spacer {
   height: 10px;
 }
 
-.wrapper .container .dynamic .topTwo .onReply {
+.container .dynamic .topTwo .onReply {
   margin-top: -5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -237,9 +282,10 @@ ul {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  margin-bottom: 15px;
 }
 
-.wrapper .container .dynamic .topTwo .onReply #comms {
+.container .dynamic .topTwo .onReply #comms {
   font-family: "Rubik", sans-serif;
   margin-top: 10px;
   width: 500px;
@@ -248,13 +294,13 @@ ul {
   padding: 10px;
 }
 
-.wrapper .container .dynamic .topTwo .onReply img {
+.container .dynamic .topTwo .onReply img {
   height: 32px;
   width: 32px;
   margin: 5px 15px;
 }
 
-.wrapper .container .dynamic .topTwo .onReply #hitReply {
+.container .dynamic .topTwo .onReply #hitReply {
   position: relative;
   left: 10px;
   background-color: #5457b6;
@@ -265,13 +311,13 @@ ul {
   bottom: 50%;
 }
 
-.wrapper .container .dynamic .bottomTwo {
+.container .dynamic .bottomTwo {
   height: 250px;
   margin-left: 32px;
   border-left: ridge;
 }
 
-.wrapper .container .dynamic .bottomTwo .second {
+.container .dynamic .bottomTwo .second {
   width: 100%;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -286,12 +332,12 @@ ul {
   width: fit-content;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .houser {
+.container .dynamic .bottomTwo .second .houser {
   position: absolute;
   width: 60px;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .houser .counter {
+.container .dynamic .bottomTwo .second .houser .counter {
   position: relative;
   width: 30px;
   height: 70px;
@@ -301,7 +347,7 @@ ul {
   background-color: #f5f6fa;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .houser .counter .count {
+.container .dynamic .bottomTwo .second .houser .counter .count {
   height: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -314,16 +360,16 @@ ul {
           justify-content: center;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .houser .counter img {
+.container .dynamic .bottomTwo .second .houser .counter img {
   width: 40%;
   margin: 30%;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .houser .counter img:hover {
+.container .dynamic .bottomTwo .second .houser .counter img:hover {
   cursor: pointer;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .topStuff {
+.container .dynamic .bottomTwo .second .topStuff {
   height: 50px;
   margin-left: 60px;
   display: -webkit-box;
@@ -331,41 +377,41 @@ ul {
   display: flex;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .topStuff img {
+.container .dynamic .bottomTwo .second .topStuff img {
   height: 30px;
   width: 30px;
   margin: 5px;
   margin-top: 15px;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .topStuff #svg {
+.container .dynamic .bottomTwo .second .topStuff #svg {
   margin-left: 30%;
   height: 15px;
   width: 15px;
   margin-top: 22px;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .topStuff p {
+.container .dynamic .bottomTwo .second .topStuff p {
   position: relative;
   bottom: -4px;
   margin-left: 15px;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .topStuff a {
+.container .dynamic .bottomTwo .second .topStuff a {
   margin-top: 20px;
   text-decoration: none;
   font-weight: bold;
   font-size: large;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .topStuff #dit {
+.container .dynamic .bottomTwo .second .topStuff #dit {
   width: 200px;
   font-weight: lighter;
   padding-bottom: 7px;
   color: #c3c4ef;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .topStuff .you {
+.container .dynamic .bottomTwo .second .topStuff .you {
   margin-top: 21px;
   margin-bottom: 10px;
   width: 40px;
@@ -382,7 +428,7 @@ ul {
   color: white;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .topStuff .option {
+.container .dynamic .bottomTwo .second .topStuff .option {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -399,18 +445,18 @@ ul {
   cursor: pointer;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .topStuff .option p {
+.container .dynamic .bottomTwo .second .topStuff .option p {
   color: #5457b6;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .topStuff .option #svg {
+.container .dynamic .bottomTwo .second .topStuff .option #svg {
   height: 12px;
   width: 12px;
   margin-top: 15px;
   margin-right: -9px;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .topStuff .options {
+.container .dynamic .bottomTwo .second .topStuff .options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -419,16 +465,16 @@ ul {
           align-items: center;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .topStuff .options img {
+.container .dynamic .bottomTwo .second .topStuff .options img {
   height: 15px;
   width: 15px;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .topStuff .options p {
+.container .dynamic .bottomTwo .second .topStuff .options p {
   margin: 5px;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .topStuff .options .delete {
+.container .dynamic .bottomTwo .second .topStuff .options .delete {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -438,11 +484,11 @@ ul {
   cursor: pointer;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .topStuff .options .delete #red {
+.container .dynamic .bottomTwo .second .topStuff .options .delete #red {
   color: #ed6468;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .topStuff .options .edit {
+.container .dynamic .bottomTwo .second .topStuff .options .edit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -453,11 +499,11 @@ ul {
   cursor: pointer;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .topStuff .options .edit #blue {
+.container .dynamic .bottomTwo .second .topStuff .options .edit #blue {
   color: #5457b6;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .coments {
+.container .dynamic .bottomTwo .second .coments {
   margin-left: 70px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -465,13 +511,53 @@ ul {
   margin-right: 10px;
 }
 
-.wrapper .container .dynamic .bottomTwo .second .spacer {
+.container .dynamic .bottomTwo .second .spacer {
   height: 10px;
 }
 
-.wrapper .container .comment_section {
-  position: absolute;
-  top: 80%;
+.container .dynamic .bottomTwo .onReply {
+  margin-top: -5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  border-radius: 3px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-left: 30px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.container .dynamic .bottomTwo .onReply #comms {
+  font-family: "Rubik", sans-serif;
+  margin-top: 10px;
+  width: 500px;
+  border-radius: 5px;
+  height: 60px;
+  padding: 10px;
+  width: 430px;
+}
+
+.container .dynamic .bottomTwo .onReply img {
+  height: 32px;
+  width: 32px;
+  margin: 5px 15px;
+}
+
+.container .dynamic .bottomTwo .onReply #hitReply {
+  position: relative;
+  left: 10px;
+  background-color: #5457b6;
+  width: 80px;
+  height: 40px;
+  border-radius: 7px;
+  color: white;
+  bottom: 50%;
+}
+
+.container .comment_section {
   width: 100%;
   height: 100px;
   background-color: #f5f6fa;
@@ -481,7 +567,7 @@ ul {
   border-radius: 5px;
 }
 
-.wrapper .container .comment_section #ig {
+.container .comment_section #ig {
   position: relative;
   width: 40px;
   height: 40px;
@@ -489,7 +575,7 @@ ul {
   top: 10px;
 }
 
-.wrapper .container .comment_section #comms {
+.container .comment_section #comms {
   font-family: "Rubik", sans-serif;
   margin-top: 10px;
   width: 500px;
@@ -499,7 +585,7 @@ ul {
   margin-left: 25px;
 }
 
-.wrapper .container .comment_section #hit {
+.container .comment_section #hit {
   position: relative;
   left: 10px;
   background-color: #5457b6;

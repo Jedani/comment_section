@@ -22,6 +22,34 @@ function showReply(replyTo, currentUser, id) {
 	}
 }
 
+const deleteBox = document.getElementById("mod");
+function deleter(id) {
+	deleteBox.classList.add("active");
+	deleteBox.innerHTML = `
+	<div class="modalHouse">
+		<div class="deleter">
+			<h3>Delete comment</h3>
+			<p> Are you sure you want to delete this comment?
+			This will remove the comment and can't be undone.
+			</p>
+			<div class="delete-options">
+				<button id="no" onclick="No()">NO, CANCEL</button>
+				<button id="yes" onclick="Yes('${id}')">YES, DELETE</button>
+			</div>
+		</div>
+  </div>
+  `;
+}
+function No() {
+	deleteBox.classList.remove("active");
+}
+
+function Yes(id) {
+	const comment = document.getElementById(id);
+	comment.parentNode.removeChild(comment);
+	deleteBox.classList.remove("active");
+}
+
 function main(data) {
 	const comments = data.comments;
 	const commentNode = document.getElementById("topDawg");
@@ -38,7 +66,7 @@ function main(data) {
 			<div class="options">
 				<div class="delete">
 					<img  src="./images/icon-delete.svg" alt="" />
-					<p id="red"><strong>Delete</strong></p>
+					<p id="red" onclick="deleter('${id}')"><strong>Delete</strong></p>
 				</div>
 				<div class="edit">
 					<img  src="./images/icon-edit.svg" alt="" />
@@ -103,15 +131,10 @@ function main(data) {
 									${optional}
 						</div>
 					
-						<div class="coments">${reply.content}</div>
+						<div class="coments"> ${reply.content}</div>
 						<div class="spacer"></div>`,
 				);
 			});
 		}
 	});
 }
-
-const sendbtn = document.getElementById("hit");
-sendbtn.addEventListener("click", function (event) {
-	event.preventDefault();
-});
