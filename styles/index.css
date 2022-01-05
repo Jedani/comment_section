@@ -277,6 +277,13 @@ body {
   padding: 5px 0px 20px 10px;
 }
 
+.container .wrapper .dynamic .topTwo .first .coments #replyTo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: contents;
+}
+
 .container .wrapper .dynamic .topTwo .first .coments #re {
   color: #5457b6;
   font: bold;
@@ -511,6 +518,13 @@ body {
   height: fit-content;
   margin-right: 35px;
   padding: 5px 0px 20px 10px;
+}
+
+.container .wrapper .dynamic .bottomTwo .second .coments #replyTo {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: contents;
 }
 
 .container .wrapper .dynamic .bottomTwo .second .coments #re {

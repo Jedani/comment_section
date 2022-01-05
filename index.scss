@@ -113,6 +113,12 @@
 		height: fit-content;
 		margin-right: 35px;
 		padding: 5px 0px 20px 10px;
+
+		#replyTo {
+			width: fit-content;
+			display: contents;
+		}
+
 		#re {
 			color: hsl(238, 40%, 52%);
 			font: bold;

@@ -55,19 +55,30 @@ function editor(id) {
 	const look = edited.querySelector(".coments");
 	look.setAttribute("contenteditable", "true");
 
-	if (look.classList == "coments") {
-		look.insertAdjacentHTML(
-			"afterend",
-			`
+	look.insertAdjacentHTML(
+		"afterend",
+		`
 		 <button id="update" type="submit" onclick="updater('${id}')">UPDATE</button>
 		`,
-		);
-	}
-	look.classList.add("selected");
+	);
 }
 
 function updater(id) {
-	alert("me");
+	const updateBtn = document.getElementById("update");
+	const text = document.getElementById(id);
+	const newText = text.querySelector(".coments");
+	let newContent = newText.innerText;
+	newText.innerText = "";
+
+	newText.insertAdjacentHTML(
+		"afterbegin",
+		`
+		${newContent}
+		`,
+	);
+
+	newText.setAttribute("contenteditable", "false");
+	updateBtn.style.display = "none";
 }
 
 function main(data) {
@@ -114,9 +125,9 @@ function main(data) {
 			`	<div class="first" id=${element.id}>
 					<div class="houser">
 						<div class="counter">
-							<img src="./images/icon-plus.svg" alt="" />
-							<div class="count">${element.score}</div>
-							<img  src="./images/icon-minus.svg" alt="" />
+							<img id="p${element.id}" src="./images/icon-plus.svg" alt="" onclick="counter('${element.id}')"/>
+							<div class="count" id=${element.id}>${element.score}</div>
+							<img id="m${element.id}" src="./images/icon-minus.svg" alt="" onclick="counter('${element.id}')"/>
 						</div>
 					</div>
 
@@ -142,9 +153,9 @@ function main(data) {
 					`	<div class="second" id=${reply.id}>
 							<div class="houser">
 								<div class="counter">
-									<img src="./images/icon-plus.svg" alt="" />
-									<div class="count">${reply.score}</div>
-									<img  src="./images/icon-minus.svg" alt="" />
+									<img id="p${reply.id}" src="./images/icon-plus.svg" alt="" onclick="counter('${reply.id}')"/>
+									<div class="count" id=${reply.id}>${reply.score}</div>
+									<img id="m${reply.id}" src="./images/icon-minus.svg" alt="" onclick="counter('${reply.id}')" />
 								</div>
 							</div>
 
@@ -156,7 +167,9 @@ function main(data) {
 									${optional}
 								</div>
 								<div class="coments" id=${reply.id}>
+									<div id="replyTo">
 									<span id="re"><strong>@${reply.replyingTo}</strong></span>
+									</div>
 									 ${reply.content}
 								</div>
 							</div>
@@ -167,3 +180,16 @@ function main(data) {
 		}
 	});
 }
+
+function counter(id) {
+	const count = document.getElementById(`${id}`);
+	const num = count.querySelector(".count");
+	// let stringy = num.innerText;
+	// let inty = parseInt(stringy);
+	console.log(num);
+}
+
+const sender = document.querySelector("#hit");
+sender.addEventListener("click", function (e) {
+	e.preventDefault();
+});
