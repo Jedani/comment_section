@@ -1,31 +1,33 @@
 @mixin commentCard {
 	width: 100%;
 	height: max-content;
-	margin: 10px 0px;
 	background-color: white;
 	border-radius: 5px;
+	display: flex;
 
 	.houser {
-		position: absolute;
 		width: 60px;
+
 		.counter {
-			position: relative;
 			width: 30px;
 			height: 70px;
-			left: 15px;
-			top: 15px;
 			border-radius: 10px;
 			background-color: hsl(228, 33%, 97%);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin: 20px;
 
 			.count {
-				height: 15px;
+				height: 42px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
 			}
 			img {
-				width: 40%;
-				margin: 30%;
+				width: 10px;
+
 				&:hover {
 					cursor: pointer;
 				}
@@ -35,15 +37,14 @@
 
 	.topStuff {
 		height: 50px;
-		margin-left: 60px;
 		display: flex;
 		@include imgs;
 
 		#dit {
-			width: 200px;
+			width: 250px;
 			font-weight: lighter;
-			padding-bottom: 7px;
 			color: hsl(239, 57%, 85%);
+			margin-left: 16px;
 		}
 
 		.you {
@@ -62,7 +63,6 @@
 			align-items: center;
 			justify-content: end;
 			width: stretch;
-			margin-right: 40px;
 			cursor: pointer;
 			p {
 				color: hsl(238, 40%, 52%);
@@ -71,9 +71,9 @@
 				height: 12px;
 				width: 12px;
 				margin-top: 15px;
-				margin-right: -9px;
 			}
 		}
+
 		.options {
 			display: flex;
 			align-items: center;
@@ -94,6 +94,7 @@
 					color: hsl(358, 79%, 66%);
 				}
 			}
+
 			.edit {
 				display: flex;
 				align-items: center;
@@ -107,7 +108,8 @@
 	}
 
 	.coments {
-		margin-left: 70px;
+		border: solid gold;
+
 		height: fit-content;
 		margin-right: 10px;
 	}
@@ -121,8 +123,7 @@
 	img {
 		height: 30px;
 		width: 30px;
-		margin: 5px;
-		margin-top: 15px;
+		margin: 15px 10px;
 	}
 
 	#svg {
@@ -130,17 +131,6 @@
 		height: 15px;
 		width: 15px;
 		margin-top: 22px;
-	}
-	p {
-		position: relative;
-		bottom: -4px;
-		margin-left: 15px;
-	}
-	a {
-		margin-top: 20px;
-		text-decoration: none;
-		font-weight: bold;
-		font-size: large;
 	}
 }
 
@@ -164,17 +154,18 @@
 	padding: 10px;
 }
 
-@mixin replyBox {
-}
-
 body {
-	width: 95vw;
-	height: 90vh;
+	width: 100vw;
+	height: 100vh;
 	font-family: "Rubik", sans-serif;
 	font-size: 16px;
 	margin: 0;
 	padding: 0;
 	background-color: hsl(223, 19%, 93%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .modal {
@@ -226,81 +217,79 @@ body {
 }
 
 .container {
-	height: 100%;
+	height: 98%;
 	width: 700px;
-	border: solid gold;
 
 	.wrapper {
-		border: solid black;
-		height: 550px;
-	}
+		height: fit-content;
 
-	.dynamic {
-		.topTwo {
-			height: fit-content;
-
-			.first {
-				@include commentCard;
-			}
-
-			.onReply {
-				margin-top: -5px;
-				display: flex;
-				background-color: white;
-				border-radius: 3px;
+		.dynamic {
+			.topTwo {
 				height: fit-content;
-				margin-bottom: 15px;
 
-				#comms {
-					@include comment;
+				.first {
+					@include commentCard;
 				}
 
-				img {
-					height: 32px;
-					width: 32px;
-					margin: 5px 15px;
-				}
+				.onReply {
+					margin-top: -5px;
+					display: flex;
+					background-color: white;
+					border-radius: 3px;
+					height: fit-content;
+					margin-bottom: 15px;
 
-				#hitReply {
-					@include button;
+					#comms {
+						@include comment;
+					}
+
+					img {
+						height: 32px;
+						width: 32px;
+						margin: 5px 15px;
+					}
+
+					#hitReply {
+						@include button;
+					}
 				}
 			}
-		}
 
-		.bottomTwo {
-			height: 250px;
-			margin-left: 32px;
-			border-left: ridge;
+			.bottomTwo {
+				height: 250px;
+				margin-left: 32px;
+				border-left: ridge;
 
-			.second {
-				@include commentCard;
-				margin-top: 0px;
-				margin-left: 30px;
-				width: fit-content;
-			}
-			.onReply {
-				margin-top: -5px;
-				display: flex;
-				background-color: white;
-				border-radius: 3px;
-				height: fit-content;
-				margin-left: 30px;
-				height: 100px;
-				margin-bottom: 10px;
-
-				#comms {
-					@include comment;
-					width: 430px;
+				.second {
+					@include commentCard;
+					margin-top: 0px;
+					margin-left: 30px;
+					width: fit-content;
 				}
+				.onReply {
+					margin-top: -5px;
+					display: flex;
+					background-color: white;
+					border-radius: 3px;
+					height: fit-content;
+					margin-left: 30px;
+					height: 100px;
+					margin-bottom: 10px;
 
-				img {
-					height: 32px;
-					width: 32px;
-					margin: 5px 15px;
-				}
+					#comms {
+						@include comment;
+						width: 430px;
+					}
 
-				#hitReply {
-					@include button;
+					img {
+						height: 32px;
+						width: 32px;
+						margin: 5px 15px;
+					}
+
+					#hitReply {
+						@include button;
+					}
 				}
 			}
 		}
@@ -329,4 +318,10 @@ body {
 			@include button;
 		}
 	}
+}
+
+.attribution {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
 }

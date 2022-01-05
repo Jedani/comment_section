@@ -1,11 +1,24 @@
 body {
-  width: 95vw;
-  height: 90vh;
+  width: 100vw;
+  height: 100vh;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
   margin: 0;
   padding: 0;
   background-color: #eaecf1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modal {
@@ -63,49 +76,61 @@ body {
 }
 
 .container {
-  height: 100%;
+  height: 98%;
   width: 700px;
-  border: solid gold;
 }
 
 .container .wrapper {
-  border: solid black;
-  height: 550px;
-}
-
-.container .dynamic .topTwo {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
 
-.container .dynamic .topTwo .first {
+.container .wrapper .dynamic .topTwo {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.container .wrapper .dynamic .topTwo .first {
   width: 100%;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  margin: 10px 0px;
   background-color: white;
   border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.container .dynamic .topTwo .first .houser {
-  position: absolute;
+.container .wrapper .dynamic .topTwo .first .houser {
   width: 60px;
 }
 
-.container .dynamic .topTwo .first .houser .counter {
-  position: relative;
+.container .wrapper .dynamic .topTwo .first .houser .counter {
   width: 30px;
   height: 70px;
-  left: 15px;
-  top: 15px;
   border-radius: 10px;
   background-color: #f5f6fa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px;
 }
 
-.container .dynamic .topTwo .first .houser .counter .count {
-  height: 15px;
+.container .wrapper .dynamic .topTwo .first .houser .counter .count {
+  height: 42px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,58 +142,42 @@ body {
           justify-content: center;
 }
 
-.container .dynamic .topTwo .first .houser .counter img {
-  width: 40%;
-  margin: 30%;
+.container .wrapper .dynamic .topTwo .first .houser .counter img {
+  width: 10px;
 }
 
-.container .dynamic .topTwo .first .houser .counter img:hover {
+.container .wrapper .dynamic .topTwo .first .houser .counter img:hover {
   cursor: pointer;
 }
 
-.container .dynamic .topTwo .first .topStuff {
+.container .wrapper .dynamic .topTwo .first .topStuff {
   height: 50px;
-  margin-left: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.container .dynamic .topTwo .first .topStuff img {
+.container .wrapper .dynamic .topTwo .first .topStuff img {
   height: 30px;
   width: 30px;
-  margin: 5px;
-  margin-top: 15px;
+  margin: 15px 10px;
 }
 
-.container .dynamic .topTwo .first .topStuff #svg {
+.container .wrapper .dynamic .topTwo .first .topStuff #svg {
   margin-left: 30%;
   height: 15px;
   width: 15px;
   margin-top: 22px;
 }
 
-.container .dynamic .topTwo .first .topStuff p {
-  position: relative;
-  bottom: -4px;
-  margin-left: 15px;
-}
-
-.container .dynamic .topTwo .first .topStuff a {
-  margin-top: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: large;
-}
-
-.container .dynamic .topTwo .first .topStuff #dit {
-  width: 200px;
+.container .wrapper .dynamic .topTwo .first .topStuff #dit {
+  width: 250px;
   font-weight: lighter;
-  padding-bottom: 7px;
   color: #c3c4ef;
+  margin-left: 16px;
 }
 
-.container .dynamic .topTwo .first .topStuff .you {
+.container .wrapper .dynamic .topTwo .first .topStuff .you {
   margin-top: 21px;
   margin-bottom: 10px;
   width: 40px;
@@ -185,7 +194,7 @@ body {
   color: white;
 }
 
-.container .dynamic .topTwo .first .topStuff .option {
+.container .wrapper .dynamic .topTwo .first .topStuff .option {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,22 +207,20 @@ body {
   width: -webkit-fill-available;
   width: -moz-available;
   width: stretch;
-  margin-right: 40px;
   cursor: pointer;
 }
 
-.container .dynamic .topTwo .first .topStuff .option p {
+.container .wrapper .dynamic .topTwo .first .topStuff .option p {
   color: #5457b6;
 }
 
-.container .dynamic .topTwo .first .topStuff .option #svg {
+.container .wrapper .dynamic .topTwo .first .topStuff .option #svg {
   height: 12px;
   width: 12px;
   margin-top: 15px;
-  margin-right: -9px;
 }
 
-.container .dynamic .topTwo .first .topStuff .options {
+.container .wrapper .dynamic .topTwo .first .topStuff .options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,16 +229,16 @@ body {
           align-items: center;
 }
 
-.container .dynamic .topTwo .first .topStuff .options img {
+.container .wrapper .dynamic .topTwo .first .topStuff .options img {
   height: 15px;
   width: 15px;
 }
 
-.container .dynamic .topTwo .first .topStuff .options p {
+.container .wrapper .dynamic .topTwo .first .topStuff .options p {
   margin: 5px;
 }
 
-.container .dynamic .topTwo .first .topStuff .options .delete {
+.container .wrapper .dynamic .topTwo .first .topStuff .options .delete {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -241,11 +248,11 @@ body {
   cursor: pointer;
 }
 
-.container .dynamic .topTwo .first .topStuff .options .delete #red {
+.container .wrapper .dynamic .topTwo .first .topStuff .options .delete #red {
   color: #ed6468;
 }
 
-.container .dynamic .topTwo .first .topStuff .options .edit {
+.container .wrapper .dynamic .topTwo .first .topStuff .options .edit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -256,23 +263,23 @@ body {
   cursor: pointer;
 }
 
-.container .dynamic .topTwo .first .topStuff .options .edit #blue {
+.container .wrapper .dynamic .topTwo .first .topStuff .options .edit #blue {
   color: #5457b6;
 }
 
-.container .dynamic .topTwo .first .coments {
-  margin-left: 70px;
+.container .wrapper .dynamic .topTwo .first .coments {
+  border: solid gold;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   margin-right: 10px;
 }
 
-.container .dynamic .topTwo .first .spacer {
+.container .wrapper .dynamic .topTwo .first .spacer {
   height: 10px;
 }
 
-.container .dynamic .topTwo .onReply {
+.container .wrapper .dynamic .topTwo .onReply {
   margin-top: -5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -285,7 +292,7 @@ body {
   margin-bottom: 15px;
 }
 
-.container .dynamic .topTwo .onReply #comms {
+.container .wrapper .dynamic .topTwo .onReply #comms {
   font-family: "Rubik", sans-serif;
   margin-top: 10px;
   width: 500px;
@@ -294,13 +301,13 @@ body {
   padding: 10px;
 }
 
-.container .dynamic .topTwo .onReply img {
+.container .wrapper .dynamic .topTwo .onReply img {
   height: 32px;
   width: 32px;
   margin: 5px 15px;
 }
 
-.container .dynamic .topTwo .onReply #hitReply {
+.container .wrapper .dynamic .topTwo .onReply #hitReply {
   position: relative;
   left: 10px;
   background-color: #5457b6;
@@ -311,20 +318,22 @@ body {
   bottom: 50%;
 }
 
-.container .dynamic .bottomTwo {
+.container .wrapper .dynamic .bottomTwo {
   height: 250px;
   margin-left: 32px;
   border-left: ridge;
 }
 
-.container .dynamic .bottomTwo .second {
+.container .wrapper .dynamic .bottomTwo .second {
   width: 100%;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  margin: 10px 0px;
   background-color: white;
   border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 0px;
   margin-left: 30px;
   width: -webkit-fit-content;
@@ -332,23 +341,33 @@ body {
   width: fit-content;
 }
 
-.container .dynamic .bottomTwo .second .houser {
-  position: absolute;
+.container .wrapper .dynamic .bottomTwo .second .houser {
   width: 60px;
 }
 
-.container .dynamic .bottomTwo .second .houser .counter {
-  position: relative;
+.container .wrapper .dynamic .bottomTwo .second .houser .counter {
   width: 30px;
   height: 70px;
-  left: 15px;
-  top: 15px;
   border-radius: 10px;
   background-color: #f5f6fa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px;
 }
 
-.container .dynamic .bottomTwo .second .houser .counter .count {
-  height: 15px;
+.container .wrapper .dynamic .bottomTwo .second .houser .counter .count {
+  height: 42px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -360,58 +379,42 @@ body {
           justify-content: center;
 }
 
-.container .dynamic .bottomTwo .second .houser .counter img {
-  width: 40%;
-  margin: 30%;
+.container .wrapper .dynamic .bottomTwo .second .houser .counter img {
+  width: 10px;
 }
 
-.container .dynamic .bottomTwo .second .houser .counter img:hover {
+.container .wrapper .dynamic .bottomTwo .second .houser .counter img:hover {
   cursor: pointer;
 }
 
-.container .dynamic .bottomTwo .second .topStuff {
+.container .wrapper .dynamic .bottomTwo .second .topStuff {
   height: 50px;
-  margin-left: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.container .dynamic .bottomTwo .second .topStuff img {
+.container .wrapper .dynamic .bottomTwo .second .topStuff img {
   height: 30px;
   width: 30px;
-  margin: 5px;
-  margin-top: 15px;
+  margin: 15px 10px;
 }
 
-.container .dynamic .bottomTwo .second .topStuff #svg {
+.container .wrapper .dynamic .bottomTwo .second .topStuff #svg {
   margin-left: 30%;
   height: 15px;
   width: 15px;
   margin-top: 22px;
 }
 
-.container .dynamic .bottomTwo .second .topStuff p {
-  position: relative;
-  bottom: -4px;
-  margin-left: 15px;
-}
-
-.container .dynamic .bottomTwo .second .topStuff a {
-  margin-top: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: large;
-}
-
-.container .dynamic .bottomTwo .second .topStuff #dit {
-  width: 200px;
+.container .wrapper .dynamic .bottomTwo .second .topStuff #dit {
+  width: 250px;
   font-weight: lighter;
-  padding-bottom: 7px;
   color: #c3c4ef;
+  margin-left: 16px;
 }
 
-.container .dynamic .bottomTwo .second .topStuff .you {
+.container .wrapper .dynamic .bottomTwo .second .topStuff .you {
   margin-top: 21px;
   margin-bottom: 10px;
   width: 40px;
@@ -428,7 +431,7 @@ body {
   color: white;
 }
 
-.container .dynamic .bottomTwo .second .topStuff .option {
+.container .wrapper .dynamic .bottomTwo .second .topStuff .option {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -441,22 +444,20 @@ body {
   width: -webkit-fill-available;
   width: -moz-available;
   width: stretch;
-  margin-right: 40px;
   cursor: pointer;
 }
 
-.container .dynamic .bottomTwo .second .topStuff .option p {
+.container .wrapper .dynamic .bottomTwo .second .topStuff .option p {
   color: #5457b6;
 }
 
-.container .dynamic .bottomTwo .second .topStuff .option #svg {
+.container .wrapper .dynamic .bottomTwo .second .topStuff .option #svg {
   height: 12px;
   width: 12px;
   margin-top: 15px;
-  margin-right: -9px;
 }
 
-.container .dynamic .bottomTwo .second .topStuff .options {
+.container .wrapper .dynamic .bottomTwo .second .topStuff .options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -465,16 +466,16 @@ body {
           align-items: center;
 }
 
-.container .dynamic .bottomTwo .second .topStuff .options img {
+.container .wrapper .dynamic .bottomTwo .second .topStuff .options img {
   height: 15px;
   width: 15px;
 }
 
-.container .dynamic .bottomTwo .second .topStuff .options p {
+.container .wrapper .dynamic .bottomTwo .second .topStuff .options p {
   margin: 5px;
 }
 
-.container .dynamic .bottomTwo .second .topStuff .options .delete {
+.container .wrapper .dynamic .bottomTwo .second .topStuff .options .delete {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -484,11 +485,11 @@ body {
   cursor: pointer;
 }
 
-.container .dynamic .bottomTwo .second .topStuff .options .delete #red {
+.container .wrapper .dynamic .bottomTwo .second .topStuff .options .delete #red {
   color: #ed6468;
 }
 
-.container .dynamic .bottomTwo .second .topStuff .options .edit {
+.container .wrapper .dynamic .bottomTwo .second .topStuff .options .edit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -499,23 +500,23 @@ body {
   cursor: pointer;
 }
 
-.container .dynamic .bottomTwo .second .topStuff .options .edit #blue {
+.container .wrapper .dynamic .bottomTwo .second .topStuff .options .edit #blue {
   color: #5457b6;
 }
 
-.container .dynamic .bottomTwo .second .coments {
-  margin-left: 70px;
+.container .wrapper .dynamic .bottomTwo .second .coments {
+  border: solid gold;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   margin-right: 10px;
 }
 
-.container .dynamic .bottomTwo .second .spacer {
+.container .wrapper .dynamic .bottomTwo .second .spacer {
   height: 10px;
 }
 
-.container .dynamic .bottomTwo .onReply {
+.container .wrapper .dynamic .bottomTwo .onReply {
   margin-top: -5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -530,7 +531,7 @@ body {
   margin-bottom: 10px;
 }
 
-.container .dynamic .bottomTwo .onReply #comms {
+.container .wrapper .dynamic .bottomTwo .onReply #comms {
   font-family: "Rubik", sans-serif;
   margin-top: 10px;
   width: 500px;
@@ -540,13 +541,13 @@ body {
   width: 430px;
 }
 
-.container .dynamic .bottomTwo .onReply img {
+.container .wrapper .dynamic .bottomTwo .onReply img {
   height: 32px;
   width: 32px;
   margin: 5px 15px;
 }
 
-.container .dynamic .bottomTwo .onReply #hitReply {
+.container .wrapper .dynamic .bottomTwo .onReply #hitReply {
   position: relative;
   left: 10px;
   background-color: #5457b6;
@@ -594,5 +595,11 @@ body {
   border-radius: 7px;
   color: white;
   bottom: 50%;
+}
+
+.attribution {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
 }
 /*# sourceMappingURL=index.css.map */
