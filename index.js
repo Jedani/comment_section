@@ -50,6 +50,26 @@ function Yes(id) {
 	deleteBox.classList.remove("active");
 }
 
+function editor(id) {
+	const edited = document.getElementById(id);
+	const look = edited.querySelector(".coments");
+	look.setAttribute("contenteditable", "true");
+
+	if (look.classList == "coments") {
+		look.insertAdjacentHTML(
+			"afterend",
+			`
+		 <button id="update" type="submit" onclick="updater('${id}')">UPDATE</button>
+		`,
+		);
+	}
+	look.classList.add("selected");
+}
+
+function updater(id) {
+	alert("me");
+}
+
 function main(data) {
 	const comments = data.comments;
 	const commentNode = document.getElementById("topDawg");
@@ -70,7 +90,7 @@ function main(data) {
 				</div>
 				<div class="edit">
 					<img  src="./images/icon-edit.svg" alt="" />
-					<p id="blue"><strong>Edit</strong></p>
+					<p id="blue" onclick="editor('${id}')"><strong>Edit</strong></p>
 				</div>
 			</div>
 				`;
@@ -135,7 +155,10 @@ function main(data) {
 									<div id="dit"><p>${reply.createdAt}</p></div>
 									${optional}
 								</div>
-							<div class="coments"> ${reply.content}</div>
+								<div class="coments" id=${reply.id}>
+									<span id="re"><strong>@${reply.replyingTo}</strong></span>
+									 ${reply.content}
+								</div>
 							</div>
 						</div>
 						`,

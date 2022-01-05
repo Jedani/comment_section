@@ -111,8 +111,12 @@
 
 	.coments {
 		height: fit-content;
-		margin-right: 42px;
+		margin-right: 35px;
 		padding: 5px 0px 20px 10px;
+		#re {
+			color: hsl(238, 40%, 52%);
+			font: bold;
+		}
 	}
 }
 
@@ -253,8 +257,6 @@ body {
 			}
 
 			.bottomTwo {
-				border: solid gold;
-
 				margin-left: 32px;
 				border-left: ridge;
 
@@ -262,6 +264,18 @@ body {
 					@include commentCard;
 					margin-left: 32px;
 					width: auto;
+
+					.align {
+						#update {
+							background: hsl(238, 40%, 52%);
+							color: white;
+							float: right;
+							border-radius: 5px;
+							height: 40px;
+							width: 80px;
+							margin: 10px 30px 20px 0;
+						}
+					}
 				}
 				.onReply {
 					margin-top: -10px;
@@ -315,6 +329,8 @@ body {
 			@include button;
 		}
 	}
+}
+.selected {
 }
 
 .attribution {

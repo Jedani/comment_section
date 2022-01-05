@@ -273,8 +273,13 @@ body {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin-right: 42px;
+  margin-right: 35px;
   padding: 5px 0px 20px 10px;
+}
+
+.container .wrapper .dynamic .topTwo .first .coments #re {
+  color: #5457b6;
+  font: bold;
 }
 
 .container .wrapper .dynamic .topTwo .onReply {
@@ -317,7 +322,6 @@ body {
 }
 
 .container .wrapper .dynamic .bottomTwo {
-  border: solid gold;
   margin-left: 32px;
   border-left: ridge;
 }
@@ -505,8 +509,23 @@ body {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin-right: 42px;
+  margin-right: 35px;
   padding: 5px 0px 20px 10px;
+}
+
+.container .wrapper .dynamic .bottomTwo .second .coments #re {
+  color: #5457b6;
+  font: bold;
+}
+
+.container .wrapper .dynamic .bottomTwo .second .align #update {
+  background: #5457b6;
+  color: white;
+  float: right;
+  border-radius: 5px;
+  height: 40px;
+  width: 80px;
+  margin: 10px 30px 20px 0;
 }
 
 .container .wrapper .dynamic .bottomTwo .onReply {
