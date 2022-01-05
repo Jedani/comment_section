@@ -99,15 +99,18 @@ function main(data) {
 							<img  src="./images/icon-minus.svg" alt="" />
 						</div>
 					</div>
-					<div class="topStuff" >
-					<img src=${element.user.image.png} alt="amy" />
-						<p ><strong>${element.user.username}</strong></p>
-						<div id="dit"><p>${element.createdAt}</p></div>
-						${optional}
+
+					<div class="align">
+						<div class="topStuff" >
+							<img src=${element.user.image.png} alt="amy" />
+							<p ><strong>${element.user.username}</strong></p>
+							<div id="dit"><p>${element.createdAt}</p></div>
+							${optional}
+						</div>
+						<div class="coments">${element.content}</div>
 					</div>
-			
-			<div class="coments">${element.content}</div>
-			<div class="spacer"></div>`,
+				</div>
+			`,
 		);
 
 		if (element.replies.length > 0) {
@@ -123,16 +126,19 @@ function main(data) {
 									<div class="count">${reply.score}</div>
 									<img  src="./images/icon-minus.svg" alt="" />
 								</div>
-						</div>
-						<div class="topStuff" >
-								<img src=${reply.user.image.png} alt="amy" />
+							</div>
+
+							<div class="align">
+								<div class="topStuff" >
+									<img src=${reply.user.image.png} alt="amy" />
 									<p ><strong>${reply.user.username}</strong> ${you}</p>
 									<div id="dit"><p>${reply.createdAt}</p></div>
 									${optional}
+								</div>
+							<div class="coments"> ${reply.content}</div>
+							</div>
 						</div>
-					
-						<div class="coments"> ${reply.content}</div>
-						<div class="spacer"></div>`,
+						`,
 				);
 			});
 		}

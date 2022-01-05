@@ -4,6 +4,7 @@
 	background-color: white;
 	border-radius: 5px;
 	display: flex;
+	margin: 0 0 15px 0;
 
 	.houser {
 		width: 60px;
@@ -41,7 +42,7 @@
 		@include imgs;
 
 		#dit {
-			width: 250px;
+			width: 180px;
 			font-weight: lighter;
 			color: hsl(239, 57%, 85%);
 			margin-left: 16px;
@@ -64,6 +65,7 @@
 			justify-content: end;
 			width: stretch;
 			cursor: pointer;
+			margin-right: 35px;
 			p {
 				color: hsl(238, 40%, 52%);
 			}
@@ -108,14 +110,9 @@
 	}
 
 	.coments {
-		border: solid gold;
-
 		height: fit-content;
-		margin-right: 10px;
-	}
-
-	.spacer {
-		height: 10px;
+		margin-right: 42px;
+		padding: 5px 0px 20px 10px;
 	}
 }
 
@@ -232,7 +229,7 @@ body {
 				}
 
 				.onReply {
-					margin-top: -5px;
+					margin-top: -10px;
 					display: flex;
 					background-color: white;
 					border-radius: 3px;
@@ -256,18 +253,18 @@ body {
 			}
 
 			.bottomTwo {
-				height: 250px;
+				border: solid gold;
+
 				margin-left: 32px;
 				border-left: ridge;
 
 				.second {
 					@include commentCard;
-					margin-top: 0px;
-					margin-left: 30px;
-					width: fit-content;
+					margin-left: 32px;
+					width: auto;
 				}
 				.onReply {
-					margin-top: -5px;
+					margin-top: -10px;
 					display: flex;
 					background-color: white;
 					border-radius: 3px;

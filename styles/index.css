@@ -102,6 +102,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 0 15px 0;
 }
 
 .container .wrapper .dynamic .topTwo .first .houser {
@@ -171,7 +172,7 @@ body {
 }
 
 .container .wrapper .dynamic .topTwo .first .topStuff #dit {
-  width: 250px;
+  width: 180px;
   font-weight: lighter;
   color: #c3c4ef;
   margin-left: 16px;
@@ -208,6 +209,7 @@ body {
   width: -moz-available;
   width: stretch;
   cursor: pointer;
+  margin-right: 35px;
 }
 
 .container .wrapper .dynamic .topTwo .first .topStuff .option p {
@@ -268,19 +270,15 @@ body {
 }
 
 .container .wrapper .dynamic .topTwo .first .coments {
-  border: solid gold;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin-right: 10px;
-}
-
-.container .wrapper .dynamic .topTwo .first .spacer {
-  height: 10px;
+  margin-right: 42px;
+  padding: 5px 0px 20px 10px;
 }
 
 .container .wrapper .dynamic .topTwo .onReply {
-  margin-top: -5px;
+  margin-top: -10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -319,7 +317,7 @@ body {
 }
 
 .container .wrapper .dynamic .bottomTwo {
-  height: 250px;
+  border: solid gold;
   margin-left: 32px;
   border-left: ridge;
 }
@@ -334,11 +332,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 0px;
-  margin-left: 30px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  margin: 0 0 15px 0;
+  margin-left: 32px;
+  width: auto;
 }
 
 .container .wrapper .dynamic .bottomTwo .second .houser {
@@ -408,7 +404,7 @@ body {
 }
 
 .container .wrapper .dynamic .bottomTwo .second .topStuff #dit {
-  width: 250px;
+  width: 180px;
   font-weight: lighter;
   color: #c3c4ef;
   margin-left: 16px;
@@ -445,6 +441,7 @@ body {
   width: -moz-available;
   width: stretch;
   cursor: pointer;
+  margin-right: 35px;
 }
 
 .container .wrapper .dynamic .bottomTwo .second .topStuff .option p {
@@ -505,19 +502,15 @@ body {
 }
 
 .container .wrapper .dynamic .bottomTwo .second .coments {
-  border: solid gold;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin-right: 10px;
-}
-
-.container .wrapper .dynamic .bottomTwo .second .spacer {
-  height: 10px;
+  margin-right: 42px;
+  padding: 5px 0px 20px 10px;
 }
 
 .container .wrapper .dynamic .bottomTwo .onReply {
-  margin-top: -5px;
+  margin-top: -10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
