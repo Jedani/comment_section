@@ -129,9 +129,9 @@ function main(data) {
 			`	<div class="first" id=${element.id}>
 					<div class="houser">
 						<div class="counter">
-							<img id="p${element.id}" src="./images/icon-plus.svg" alt="" onclick="counter('${element.id}')"/>
-							<div class="count" id=${element.id}>${element.score}</div>
-							<img id="m${element.id}" src="./images/icon-minus.svg" alt="" onclick="counter('${element.id}')"/>
+							<img id="p${element.id}" src="./images/icon-plus.svg" alt="" onclick="counterUp('${element.id}')"/>
+							<div class="count" id="${element.id}">${element.score}</div>
+							<img id="m${element.id}" src="./images/icon-minus.svg" alt="" onclick="counterDown('${element.id}')"/>
 						</div>
 					</div>
 
@@ -157,9 +157,9 @@ function main(data) {
 					`	<div class="second" id=${reply.id}>
 							<div class="houser">
 								<div class="counter">
-									<img id="p${reply.id}" src="./images/icon-plus.svg" alt="" onclick="counter('${reply.id}')"/>
-									<div class="count" id=${reply.id}>${reply.score}</div>
-									<img id="m${reply.id}" src="./images/icon-minus.svg" alt="" onclick="counter('${reply.id}')" />
+									<img id="p${reply.id}" src="./images/icon-plus.svg" alt="" onclick="counterUp('${reply.id}')"/>
+									<div class="count" id="${reply.id}">${reply.score}</div>
+									<img id="m${reply.id}" src="./images/icon-minus.svg" alt="" onclick="counterDown('${reply.id}')" />
 								</div>
 							</div>
 
@@ -185,12 +185,30 @@ function main(data) {
 	});
 }
 
-function counter(id) {
+function counterUp(id) {
 	const count = document.getElementById(`${id}`);
+	const countedUp = document.getElementById(`p${id}`);
 	const num = count.querySelector(".count");
-	// let stringy = num.innerText;
-	// let inty = parseInt(stringy);
-	console.log(num);
+	let stringy = num.innerText;
+	let inty = parseInt(stringy);
+
+	if (countedUp) {
+		inty++;
+		num.innerText = inty;
+	}
+}
+
+function counterDown(id) {
+	const count = document.getElementById(`${id}`);
+	const counteddown = document.getElementById(`m${id}`);
+	const num = count.querySelector(".count");
+	let stringy = num.innerText;
+	let inty = parseInt(stringy);
+
+	if (counteddown) {
+		inty--;
+		num.innerText = inty;
+	}
 }
 
 const sender = document.querySelector("#hit");
