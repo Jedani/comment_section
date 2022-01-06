@@ -76,7 +76,7 @@ body {
 }
 
 .container {
-  height: 98%;
+  height: 95vh;
   width: 700px;
 }
 
@@ -87,9 +87,8 @@ body {
 }
 
 .container .wrapper .dynamic .topTwo {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 294px;
+  overflow-y: auto;
 }
 
 .container .wrapper .dynamic .topTwo .first {

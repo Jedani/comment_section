@@ -54,11 +54,17 @@ function editor(id) {
 	const edited = document.getElementById(id);
 	const look = edited.querySelector(".coments");
 	look.setAttribute("contenteditable", "true");
+	const hidden = document.getElementById("update");
+
+	if (hidden) {
+		const remover = document.getElementById("update");
+		remover.parentNode.removeChild(remover);
+	}
 
 	look.insertAdjacentHTML(
 		"afterend",
 		`
-		 <button id="update" type="submit" onclick="updater('${id}')">UPDATE</button>
+		 <button class="btn" id="update" type="submit" onclick="updater('${id}')">UPDATE</button>
 		`,
 	);
 }
@@ -85,8 +91,6 @@ function main(data) {
 	const comments = data.comments;
 	const commentNode = document.getElementById("topDawg");
 	let replyNode = document.getElementById("Ent");
-	console.log(comments);
-	console.log(data);
 
 	let optional = ``;
 	let you = "";
@@ -192,4 +196,23 @@ function counter(id) {
 const sender = document.querySelector("#hit");
 sender.addEventListener("click", function (e) {
 	e.preventDefault();
+	main();
+	let i;
+
+	const content = document.getElementById("comms").value;
+	let obj = {
+		id: data.length + 1,
+		content: content,
+		createdAt: Date.now().toString(),
+		replies: [],
+		score: 0,
+		user: {
+			image: {
+				png: "./images/avatars/image-juliusomo.png",
+				webp: "./images/avatars/image-juliusomo.webp",
+			},
+			username: "juliusomo",
+		},
+	};
+	comments.push(obj);
 });

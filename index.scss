@@ -224,7 +224,7 @@ body {
 }
 
 .container {
-	height: 98%;
+	height: 95vh;
 	width: 700px;
 
 	.wrapper {
@@ -232,7 +232,8 @@ body {
 
 		.dynamic {
 			.topTwo {
-				height: fit-content;
+				height: 294px;
+				overflow-y: auto;
 
 				.first {
 					@include commentCard;
@@ -335,8 +336,6 @@ body {
 			@include button;
 		}
 	}
-}
-.selected {
 }
 
 .attribution {
