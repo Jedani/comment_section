@@ -1,6 +1,26 @@
-fetch("data.json")
-	.then((resp) => resp.json())
-	.then((data) => main(data));
+const getData = async () => {
+	const response = await fetch("datas.json");
+
+	if (response.status !== 200) {
+		throw new Error("can't fetch data from resource");
+	}
+
+	const data = await response.json();
+
+	return data;
+};
+
+getData()
+	.then((data) => main(data))
+	.catch((err) => errMessage(err.message));
+
+function errMessage(message) {
+	const display = document.getElementById("err");
+	const el = document.createElement("p");
+	display.replaceChildren();
+	display.appendChild(el);
+	el.innerText = message;
+}
 
 function showReply(replyTo, currentUser, id) {
 	const commmentContainer = document.getElementById(id);

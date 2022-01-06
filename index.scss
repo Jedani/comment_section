@@ -173,6 +173,14 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	@media screen and (max-width: 440px) {
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 }
 
 .modal {
@@ -223,9 +231,20 @@ body {
 	opacity: 1;
 }
 
+#err {
+	color: red;
+	font-size: 2em;
+}
+
 .container {
 	height: 95vh;
 	width: 700px;
+
+	@media (max-width: 440px) {
+		width: 100vw;
+		height: 100vh;
+		margin: 10px;
+	}
 
 	.wrapper {
 		height: fit-content;
@@ -237,6 +256,9 @@ body {
 
 				.first {
 					@include commentCard;
+					@media (max-width: 440px) {
+						width: fit-content;
+					}
 				}
 
 				.onReply {
@@ -336,7 +358,4 @@ body {
 			@include button;
 		}
 	}
-}
-
-.attribution {
 }

@@ -21,6 +21,26 @@ body {
           align-items: center;
 }
 
+@media screen and (max-width: 440px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .modal {
   position: fixed;
   width: 100%;
@@ -75,9 +95,22 @@ body {
   opacity: 1;
 }
 
+#err {
+  color: red;
+  font-size: 2em;
+}
+
 .container {
   height: 95vh;
   width: 700px;
+}
+
+@media (max-width: 440px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    margin: 10px;
+  }
 }
 
 .container .wrapper {
@@ -286,6 +319,14 @@ body {
 .container .wrapper .dynamic .topTwo .first .coments #re {
   color: #5457b6;
   font: bold;
+}
+
+@media (max-width: 440px) {
+  .container .wrapper .dynamic .topTwo .first {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
 }
 
 .container .wrapper .dynamic .topTwo .onReply {
