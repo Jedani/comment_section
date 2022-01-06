@@ -1,5 +1,5 @@
 const getData = async () => {
-	const response = await fetch("datas.json");
+	const response = await fetch("data.json");
 
 	if (response.status !== 200) {
 		throw new Error("can't fetch data from resource");
@@ -17,7 +17,9 @@ getData()
 function errMessage(message) {
 	const display = document.getElementById("err");
 	const el = document.createElement("p");
+	el.setAttribute("id", "eel");
 	display.replaceChildren();
+
 	display.appendChild(el);
 	el.innerText = message;
 }
