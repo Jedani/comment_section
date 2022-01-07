@@ -8,6 +8,9 @@
 
 	.houser {
 		width: 60px;
+		@media screen and (max-width: 440px) {
+			width: 0px;
+		}
 
 		.counter {
 			width: 30px;
@@ -161,6 +164,21 @@
 	padding: 10px;
 }
 
+@mixin modal {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.5s;
+}
+
 body {
 	width: 100vw;
 	height: 100vh;
@@ -174,7 +192,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	@media screen and (max-width: 440px) {
-		width: 100vw;
+		width: 100%;
 		height: 100vh;
 		display: flex;
 		flex-direction: column;
@@ -184,18 +202,10 @@ body {
 }
 
 .modal {
-	position: fixed;
-	width: 100%;
-	height: 100vh;
-	top: 0;
-	left: 0;
-	background-color: rgba(0, 0, 0, 0.4);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	visibility: hidden;
-	opacity: 0;
-	transition: visibility 0s, opacity 0.5s;
+	@include modal;
+	@media (max-width: 440px) {
+		@include modal;
+	}
 
 	.modalHouse {
 		background: whitesmoke;
@@ -241,24 +251,27 @@ body {
 	width: 700px;
 
 	@media (max-width: 440px) {
-		width: 100vw;
-		height: 100vh;
-		margin: 10px;
+		width: 400px;
+		height: 95vh;
 	}
 
 	.wrapper {
 		height: fit-content;
+		@media (max-width: 440px) {
+			width: 400px;
+			height: fit-content;
+		}
 
 		.dynamic {
+			@media (max-width: 440px) {
+				width: 100%;
+			}
 			.topTwo {
 				height: 294px;
 				overflow-y: auto;
 
 				.first {
 					@include commentCard;
-					@media (max-width: 440px) {
-						width: fit-content;
-					}
 				}
 
 				.onReply {

@@ -162,6 +162,8 @@ function main(data) {
 							<img src=${element.user.image.png} alt="amy" />
 							<p ><strong>${element.user.username}</strong></p>
 							<div id="dit"><p>${element.createdAt}</p></div>
+							</div>
+						<div class="optional">
 							${optional}
 						</div>
 						<div class="coments">${element.content}</div>

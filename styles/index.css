@@ -23,7 +23,7 @@ body {
 
 @media screen and (max-width: 440px) {
   body {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -61,6 +61,30 @@ body {
   opacity: 0;
   -webkit-transition: visibility 0s, opacity 0.5s;
   transition: visibility 0s, opacity 0.5s;
+}
+
+@media (max-width: 440px) {
+  .modal {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility 0s, opacity 0.5s;
+    transition: visibility 0s, opacity 0.5s;
+  }
 }
 
 .modal .modalHouse {
@@ -107,9 +131,8 @@ body {
 
 @media (max-width: 440px) {
   .container {
-    width: 100vw;
-    height: 100vh;
-    margin: 10px;
+    width: 400px;
+    height: 95vh;
   }
 }
 
@@ -117,6 +140,21 @@ body {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+
+@media (max-width: 440px) {
+  .container .wrapper {
+    width: 400px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+@media (max-width: 440px) {
+  .container .wrapper .dynamic {
+    width: 100%;
+  }
 }
 
 .container .wrapper .dynamic .topTwo {
@@ -139,6 +177,12 @@ body {
 
 .container .wrapper .dynamic .topTwo .first .houser {
   width: 60px;
+}
+
+@media screen and (max-width: 440px) {
+  .container .wrapper .dynamic .topTwo .first .houser {
+    width: 0px;
+  }
 }
 
 .container .wrapper .dynamic .topTwo .first .houser .counter {
@@ -321,14 +365,6 @@ body {
   font: bold;
 }
 
-@media (max-width: 440px) {
-  .container .wrapper .dynamic .topTwo .first {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-}
-
 .container .wrapper .dynamic .topTwo .onReply {
   margin-top: -10px;
   display: -webkit-box;
@@ -390,6 +426,12 @@ body {
 
 .container .wrapper .dynamic .bottomTwo .second .houser {
   width: 60px;
+}
+
+@media screen and (max-width: 440px) {
+  .container .wrapper .dynamic .bottomTwo .second .houser {
+    width: 0px;
+  }
 }
 
 .container .wrapper .dynamic .bottomTwo .second .houser .counter {
