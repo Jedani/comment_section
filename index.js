@@ -192,8 +192,11 @@ function main(data) {
 									<img src=${reply.user.image.png} alt="amy" />
 									<p ><strong>${reply.user.username}</strong> ${you}</p>
 									<div id="dit"><p>${reply.createdAt}</p></div>
+								</div>
+								<div class="optional">
 									${optional}
 								</div>
+							
 								<div class="coments" id=${reply.id}>
 									<div id="replyTo">
 									<span id="re"><strong>@${reply.replyingTo}</strong></span>

@@ -144,7 +144,8 @@ body {
 
 @media (max-width: 440px) {
   .container .wrapper {
-    width: 400px;
+    width: 320px;
+    margin-left: -5px;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -160,6 +161,14 @@ body {
 .container .wrapper .dynamic .topTwo {
   height: 294px;
   overflow-y: auto;
+}
+
+@media (max-width: 440px) {
+  .container .wrapper .dynamic .topTwo {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 
 .container .wrapper .dynamic .topTwo .first {
@@ -206,6 +215,15 @@ body {
   margin: 20px;
 }
 
+@media screen and (max-width: 440px) {
+  .container .wrapper .dynamic .topTwo .first .houser .counter {
+    margin-top: 160px;
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+    margin-left: 30px;
+  }
+}
+
 .container .wrapper .dynamic .topTwo .first .houser .counter .count {
   height: 42px;
   display: -webkit-box;
@@ -219,6 +237,13 @@ body {
           justify-content: center;
 }
 
+@media screen and (max-width: 440px) {
+  .container .wrapper .dynamic .topTwo .first .houser .counter .count {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
 .container .wrapper .dynamic .topTwo .first .houser .counter img {
   width: 10px;
 }
@@ -227,34 +252,47 @@ body {
   cursor: pointer;
 }
 
-.container .wrapper .dynamic .topTwo .first .topStuff {
+@media screen and (max-width: 440px) {
+  .container .wrapper .dynamic .topTwo .first .houser .counter img .min {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
+.container .wrapper .dynamic .topTwo .first .align .topStuff {
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.container .wrapper .dynamic .topTwo .first .topStuff img {
+.container .wrapper .dynamic .topTwo .first .align .topStuff img {
   height: 30px;
   width: 30px;
   margin: 15px 10px;
 }
 
-.container .wrapper .dynamic .topTwo .first .topStuff #svg {
+.container .wrapper .dynamic .topTwo .first .align .topStuff #svg {
   margin-left: 30%;
   height: 15px;
   width: 15px;
   margin-top: 22px;
 }
 
-.container .wrapper .dynamic .topTwo .first .topStuff #dit {
+@media screen and (max-width: 440px) {
+  .container .wrapper .dynamic .topTwo .first .align .topStuff {
+    width: 100%;
+  }
+}
+
+.container .wrapper .dynamic .topTwo .first .align .topStuff #dit {
   width: 180px;
   font-weight: lighter;
   color: #c3c4ef;
   margin-left: 16px;
 }
 
-.container .wrapper .dynamic .topTwo .first .topStuff .you {
+.container .wrapper .dynamic .topTwo .first .align .topStuff .you {
   margin-top: 21px;
   margin-bottom: 10px;
   width: 40px;
@@ -271,7 +309,24 @@ body {
   color: white;
 }
 
-.container .wrapper .dynamic .topTwo .first .topStuff .option {
+.container .wrapper .dynamic .topTwo .first .align .optional {
+  float: right;
+  margin-right: 16px;
+  margin-top: -46px;
+}
+
+@media screen and (max-width: 440px) {
+  .container .wrapper .dynamic .topTwo .first .align .optional {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    top: 160px;
+    right: -10px;
+  }
+}
+
+.container .wrapper .dynamic .topTwo .first .align .optional .option {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -281,24 +336,26 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: stretch;
   cursor: pointer;
-  margin-right: 35px;
 }
 
-.container .wrapper .dynamic .topTwo .first .topStuff .option p {
+@media screen and (max-width: 440px) {
+  .container .wrapper .dynamic .topTwo .first .align .optional .option {
+    margin-right: 20px;
+  }
+}
+
+.container .wrapper .dynamic .topTwo .first .align .optional .option p {
   color: #5457b6;
 }
 
-.container .wrapper .dynamic .topTwo .first .topStuff .option #svg {
+.container .wrapper .dynamic .topTwo .first .align .optional .option #svg {
   height: 12px;
   width: 12px;
-  margin-top: 15px;
+  margin-right: 6px;
 }
 
-.container .wrapper .dynamic .topTwo .first .topStuff .options {
+.container .wrapper .dynamic .topTwo .first .align .optional .options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -307,16 +364,17 @@ body {
           align-items: center;
 }
 
-.container .wrapper .dynamic .topTwo .first .topStuff .options img {
+.container .wrapper .dynamic .topTwo .first .align .optional .options img {
   height: 15px;
   width: 15px;
 }
 
-.container .wrapper .dynamic .topTwo .first .topStuff .options p {
+.container .wrapper .dynamic .topTwo .first .align .optional .options p {
   margin: 5px;
 }
 
-.container .wrapper .dynamic .topTwo .first .topStuff .options .delete {
+.container .wrapper .dynamic .topTwo .first .align .optional .options .delete {
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,11 +384,11 @@ body {
   cursor: pointer;
 }
 
-.container .wrapper .dynamic .topTwo .first .topStuff .options .delete #red {
+.container .wrapper .dynamic .topTwo .first .align .optional .options .delete #red {
   color: #ed6468;
 }
 
-.container .wrapper .dynamic .topTwo .first .topStuff .options .edit {
+.container .wrapper .dynamic .topTwo .first .align .optional .options .edit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -341,26 +399,32 @@ body {
   cursor: pointer;
 }
 
-.container .wrapper .dynamic .topTwo .first .topStuff .options .edit #blue {
+.container .wrapper .dynamic .topTwo .first .align .optional .options .edit #blue {
   color: #5457b6;
 }
 
-.container .wrapper .dynamic .topTwo .first .coments {
+.container .wrapper .dynamic .topTwo .first .align .coments {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin-right: 35px;
+  margin-right: 20px;
   padding: 5px 0px 20px 10px;
 }
 
-.container .wrapper .dynamic .topTwo .first .coments #replyTo {
+@media screen and (max-width: 440px) {
+  .container .wrapper .dynamic .topTwo .first .align .coments {
+    padding: 5px 0px 20px 10px;
+  }
+}
+
+.container .wrapper .dynamic .topTwo .first .align .coments #replyTo {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: contents;
 }
 
-.container .wrapper .dynamic .topTwo .first .coments #re {
+.container .wrapper .dynamic .topTwo .first .align .coments #re {
   color: #5457b6;
   font: bold;
 }
@@ -409,6 +473,12 @@ body {
   border-left: ridge;
 }
 
+@media (max-width: 440px) {
+  .container .wrapper .dynamic .bottomTwo {
+    margin-left: 0px;
+  }
+}
+
 .container .wrapper .dynamic .bottomTwo .second {
   width: 100%;
   height: -webkit-max-content;
@@ -455,6 +525,15 @@ body {
   margin: 20px;
 }
 
+@media screen and (max-width: 440px) {
+  .container .wrapper .dynamic .bottomTwo .second .houser .counter {
+    margin-top: 160px;
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+    margin-left: 30px;
+  }
+}
+
 .container .wrapper .dynamic .bottomTwo .second .houser .counter .count {
   height: 42px;
   display: -webkit-box;
@@ -468,6 +547,13 @@ body {
           justify-content: center;
 }
 
+@media screen and (max-width: 440px) {
+  .container .wrapper .dynamic .bottomTwo .second .houser .counter .count {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
 .container .wrapper .dynamic .bottomTwo .second .houser .counter img {
   width: 10px;
 }
@@ -476,34 +562,47 @@ body {
   cursor: pointer;
 }
 
-.container .wrapper .dynamic .bottomTwo .second .topStuff {
+@media screen and (max-width: 440px) {
+  .container .wrapper .dynamic .bottomTwo .second .houser .counter img .min {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
+.container .wrapper .dynamic .bottomTwo .second .align .topStuff {
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.container .wrapper .dynamic .bottomTwo .second .topStuff img {
+.container .wrapper .dynamic .bottomTwo .second .align .topStuff img {
   height: 30px;
   width: 30px;
   margin: 15px 10px;
 }
 
-.container .wrapper .dynamic .bottomTwo .second .topStuff #svg {
+.container .wrapper .dynamic .bottomTwo .second .align .topStuff #svg {
   margin-left: 30%;
   height: 15px;
   width: 15px;
   margin-top: 22px;
 }
 
-.container .wrapper .dynamic .bottomTwo .second .topStuff #dit {
+@media screen and (max-width: 440px) {
+  .container .wrapper .dynamic .bottomTwo .second .align .topStuff {
+    width: 100%;
+  }
+}
+
+.container .wrapper .dynamic .bottomTwo .second .align .topStuff #dit {
   width: 180px;
   font-weight: lighter;
   color: #c3c4ef;
   margin-left: 16px;
 }
 
-.container .wrapper .dynamic .bottomTwo .second .topStuff .you {
+.container .wrapper .dynamic .bottomTwo .second .align .topStuff .you {
   margin-top: 21px;
   margin-bottom: 10px;
   width: 40px;
@@ -520,7 +619,24 @@ body {
   color: white;
 }
 
-.container .wrapper .dynamic .bottomTwo .second .topStuff .option {
+.container .wrapper .dynamic .bottomTwo .second .align .optional {
+  float: right;
+  margin-right: 16px;
+  margin-top: -46px;
+}
+
+@media screen and (max-width: 440px) {
+  .container .wrapper .dynamic .bottomTwo .second .align .optional {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    top: 160px;
+    right: -10px;
+  }
+}
+
+.container .wrapper .dynamic .bottomTwo .second .align .optional .option {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -530,24 +646,26 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: stretch;
   cursor: pointer;
-  margin-right: 35px;
 }
 
-.container .wrapper .dynamic .bottomTwo .second .topStuff .option p {
+@media screen and (max-width: 440px) {
+  .container .wrapper .dynamic .bottomTwo .second .align .optional .option {
+    margin-right: 20px;
+  }
+}
+
+.container .wrapper .dynamic .bottomTwo .second .align .optional .option p {
   color: #5457b6;
 }
 
-.container .wrapper .dynamic .bottomTwo .second .topStuff .option #svg {
+.container .wrapper .dynamic .bottomTwo .second .align .optional .option #svg {
   height: 12px;
   width: 12px;
-  margin-top: 15px;
+  margin-right: 6px;
 }
 
-.container .wrapper .dynamic .bottomTwo .second .topStuff .options {
+.container .wrapper .dynamic .bottomTwo .second .align .optional .options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -556,16 +674,17 @@ body {
           align-items: center;
 }
 
-.container .wrapper .dynamic .bottomTwo .second .topStuff .options img {
+.container .wrapper .dynamic .bottomTwo .second .align .optional .options img {
   height: 15px;
   width: 15px;
 }
 
-.container .wrapper .dynamic .bottomTwo .second .topStuff .options p {
+.container .wrapper .dynamic .bottomTwo .second .align .optional .options p {
   margin: 5px;
 }
 
-.container .wrapper .dynamic .bottomTwo .second .topStuff .options .delete {
+.container .wrapper .dynamic .bottomTwo .second .align .optional .options .delete {
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -575,11 +694,11 @@ body {
   cursor: pointer;
 }
 
-.container .wrapper .dynamic .bottomTwo .second .topStuff .options .delete #red {
+.container .wrapper .dynamic .bottomTwo .second .align .optional .options .delete #red {
   color: #ed6468;
 }
 
-.container .wrapper .dynamic .bottomTwo .second .topStuff .options .edit {
+.container .wrapper .dynamic .bottomTwo .second .align .optional .options .edit {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -590,28 +709,40 @@ body {
   cursor: pointer;
 }
 
-.container .wrapper .dynamic .bottomTwo .second .topStuff .options .edit #blue {
+.container .wrapper .dynamic .bottomTwo .second .align .optional .options .edit #blue {
   color: #5457b6;
 }
 
-.container .wrapper .dynamic .bottomTwo .second .coments {
+.container .wrapper .dynamic .bottomTwo .second .align .coments {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin-right: 35px;
+  margin-right: 20px;
   padding: 5px 0px 20px 10px;
 }
 
-.container .wrapper .dynamic .bottomTwo .second .coments #replyTo {
+@media screen and (max-width: 440px) {
+  .container .wrapper .dynamic .bottomTwo .second .align .coments {
+    padding: 5px 0px 20px 10px;
+  }
+}
+
+.container .wrapper .dynamic .bottomTwo .second .align .coments #replyTo {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: contents;
 }
 
-.container .wrapper .dynamic .bottomTwo .second .coments #re {
+.container .wrapper .dynamic .bottomTwo .second .align .coments #re {
   color: #5457b6;
   font: bold;
+}
+
+@media (max-width: 440px) {
+  .container .wrapper .dynamic .bottomTwo .second {
+    margin-left: 10px;
+  }
 }
 
 .container .wrapper .dynamic .bottomTwo .second .align #update {
@@ -676,12 +807,28 @@ body {
   border-radius: 5px;
 }
 
+@media screen and (max-width: 440px) {
+  .container .comment_section {
+    width: 330px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
 .container .comment_section #ig {
   position: relative;
   width: 40px;
   height: 40px;
   left: 15px;
   top: 10px;
+}
+
+@media screen and (max-width: 440px) {
+  .container .comment_section #ig {
+    top: 106px;
+    left: 20px;
+  }
 }
 
 .container .comment_section #comms {
@@ -694,6 +841,13 @@ body {
   margin-left: 25px;
 }
 
+@media screen and (max-width: 440px) {
+  .container .comment_section #comms {
+    width: 280px;
+    margin-left: -20px;
+  }
+}
+
 .container .comment_section #hit {
   position: relative;
   left: 10px;
@@ -703,5 +857,12 @@ body {
   border-radius: 7px;
   color: white;
   bottom: 50%;
+}
+
+@media screen and (max-width: 440px) {
+  .container .comment_section #hit {
+    top: 10px;
+    left: 200px;
+  }
 }
 /*# sourceMappingURL=index.css.map */
