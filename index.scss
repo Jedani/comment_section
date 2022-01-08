@@ -9,7 +9,7 @@
 	.houser {
 		width: 60px;
 		@media screen and (max-width: 440px) {
-			width: 0px;
+			display: none;
 		}
 
 		.counter {
@@ -22,30 +22,17 @@
 			align-items: center;
 			justify-content: center;
 			margin: 20px;
-			@media screen and (max-width: 440px) {
-				margin-top: 160px;
-				transform: rotate(270deg);
-				margin-left: 30px;
-			}
 
 			.count {
 				height: 42px;
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				@media screen and (max-width: 440px) {
-					transform: rotate(90deg);
-				}
 			}
 			img {
 				width: 10px;
 				&:hover {
 					cursor: pointer;
-				}
-				.min {
-					@media screen and (max-width: 440px) {
-						transform: rotate(90deg);
-					}
 				}
 			}
 		}
@@ -56,9 +43,6 @@
 			height: 50px;
 			display: flex;
 			@include imgs;
-			@media screen and (max-width: 440px) {
-				width: 100%;
-			}
 
 			#dit {
 				width: 180px;
@@ -85,10 +69,7 @@
 			margin-right: 16px;
 			margin-top: -46px;
 			@media screen and (max-width: 440px) {
-				display: flex;
-				position: relative;
-				top: 160px;
-				right: -10px;
+				display: none;
 			}
 
 			.option {
@@ -96,9 +77,6 @@
 				align-items: center;
 				justify-content: end;
 				cursor: pointer;
-				@media screen and (max-width: 440px) {
-					margin-right: 20px;
-				}
 
 				p {
 					color: hsl(238, 40%, 52%);
@@ -110,38 +88,7 @@
 				}
 			}
 
-			.options {
-				display: flex;
-				align-items: center;
-
-				img {
-					height: 15px;
-					width: 15px;
-				}
-				p {
-					margin: 5px;
-				}
-
-				.delete {
-					height: 50px;
-					display: flex;
-					align-items: center;
-					cursor: pointer;
-					#red {
-						color: hsl(358, 79%, 66%);
-					}
-				}
-
-				.edit {
-					display: flex;
-					align-items: center;
-					margin-left: 16px;
-					cursor: pointer;
-					#blue {
-						color: hsl(238, 40%, 52%);
-					}
-				}
-			}
+			@include options;
 		}
 
 		.coments {
@@ -149,7 +96,7 @@
 			margin-right: 20px;
 			padding: 5px 0px 20px 10px;
 			@media screen and (max-width: 440px) {
-				padding: 5px 0px 20px 10px;
+				padding: 5px 0px 20px 13px;
 			}
 
 			#replyTo {
@@ -189,8 +136,6 @@
 	border-radius: 7px;
 	color: white;
 	bottom: 50%;
-	@media screen and (max-width: 440px) {
-	}
 }
 
 @mixin comment {
@@ -217,8 +162,128 @@
 	transition: visibility 0s, opacity 0.5s;
 }
 
+@mixin options {
+	.options {
+		display: flex;
+		align-items: center;
+
+		img {
+			height: 15px;
+			width: 15px;
+		}
+		p {
+			margin: 5px;
+		}
+	}
+	.delete {
+		height: 50px;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		#red {
+			color: hsl(358, 79%, 66%);
+		}
+	}
+
+	.edit {
+		display: flex;
+		align-items: center;
+		margin-left: 16px;
+		cursor: pointer;
+		#blue {
+			color: hsl(238, 40%, 52%);
+		}
+	}
+}
+
+@mixin replysection {
+	.onReply {
+		margin-top: -10px;
+		display: flex;
+		background-color: white;
+		border-radius: 3px;
+		height: fit-content;
+		margin-bottom: 15px;
+
+		#comms {
+			@include comment;
+		}
+
+		img {
+			height: 32px;
+			width: 32px;
+			margin: 5px 15px;
+		}
+
+		#hitReply {
+			@include button;
+		}
+	}
+}
+
+@mixin mobile {
+	display: flex;
+	flex-direction: column;
+	.mobile-houser {
+		display: flex;
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-between;
+
+		.mobile-counter {
+			display: flex;
+			flex-direction: row;
+			width: 100px;
+			height: 35px;
+			background-color: hsl(228, 33%, 97%);
+			border-radius: 10px;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 15px;
+			margin-left: 15px;
+
+			.count {
+				width: 55px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			img {
+				width: 14px;
+				height: 8px;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+		.mobile-optional {
+			display: flex;
+			justify-content: flex-end;
+
+			.option {
+				display: flex;
+				align-items: center;
+				justify-content: end;
+				cursor: pointer;
+				margin-right: 25px;
+				height: 28px;
+				p {
+					color: hsl(238, 40%, 52%);
+				}
+				#svg {
+					height: 12px;
+					width: 12px;
+					margin-right: 6px;
+				}
+			}
+
+			@include options;
+		}
+	}
+}
+
 body {
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 	font-family: "Rubik", sans-serif;
 	font-size: 16px;
@@ -285,59 +350,46 @@ body {
 }
 
 .container {
-	height: 95vh;
+	height: auto;
 	width: 700px;
+	margin-top: 18%;
 
 	@media (max-width: 440px) {
 		width: 400px;
-		height: 95vh;
+		height: auto;
+		margin-top: 187%;
 	}
 
 	.wrapper {
 		height: fit-content;
 		@media (max-width: 440px) {
-			width: 320px;
+			width: 410px;
 			margin-left: -5px;
 			height: fit-content;
 		}
 
 		.dynamic {
 			@media (max-width: 440px) {
-				width: 100%;
+				width: 82%;
+				margin-left: 35px;
 			}
 			.topTwo {
-				height: 294px;
-				overflow-y: auto;
-				@media (max-width: 440px) {
-					height: fit-content;
-				}
+				height: fit-content;
 
 				.first {
 					@include commentCard;
-				}
-
-				.onReply {
-					margin-top: -10px;
-					display: flex;
-					background-color: white;
-					border-radius: 3px;
-					height: fit-content;
-					margin-bottom: 15px;
-
-					#comms {
-						@include comment;
+					@media (max-width: 440px) {
+						@include mobile;
 					}
-
-					img {
-						height: 32px;
-						width: 32px;
-						margin: 5px 15px;
-					}
-
-					#hitReply {
-						@include button;
+					.mobile {
+						display: none;
+						@media (max-width: 440px) {
+							@include mobile;
+						}
 					}
 				}
+
+				@include replysection;
 			}
 
 			.bottomTwo {
@@ -346,12 +398,19 @@ body {
 				@media (max-width: 440px) {
 					margin-left: 0px;
 				}
+				.mobile {
+					display: none;
+					@media (max-width: 440px) {
+						@include mobile;
+					}
+				}
 
 				.second {
 					@include commentCard;
 					margin-left: 32px;
 					width: auto;
 					@media (max-width: 440px) {
+						@include mobile;
 						margin-left: 10px;
 					}
 
@@ -367,43 +426,20 @@ body {
 						}
 					}
 				}
-				.onReply {
-					margin-top: -10px;
-					display: flex;
-					background-color: white;
-					border-radius: 3px;
-					height: fit-content;
-					margin-left: 30px;
-					height: 100px;
-					margin-bottom: 10px;
-
-					#comms {
-						@include comment;
-						width: 430px;
-					}
-
-					img {
-						height: 32px;
-						width: 32px;
-						margin: 5px 15px;
-					}
-
-					#hitReply {
-						@include button;
-					}
-				}
+				@include replysection;
 			}
 		}
 	}
 	.comment_section {
 		width: 100%;
-		height: 100px;
+		height: 115px;
 		background-color: hsl(228, 33%, 97%);
 		display: flex;
 		border-radius: 5px;
 		@media screen and (max-width: 440px) {
-			width: 330px;
-			height: fit-content;
+			width: 410px;
+			height: 165px;
+			margin-left: -5px;
 		}
 
 		#ig {
@@ -413,8 +449,8 @@ body {
 			left: 15px;
 			top: 10px;
 			@media screen and (max-width: 440px) {
-				top: 106px;
-				left: 20px;
+				top: 118px;
+				left: 28px;
 			}
 		}
 
@@ -422,8 +458,9 @@ body {
 			@include comment;
 			margin-left: 25px;
 			@media screen and (max-width: 440px) {
-				width: 280px;
+				width: 352px;
 				margin-left: -20px;
+				height: 70px;
 			}
 		}
 
@@ -431,8 +468,12 @@ body {
 			@include button;
 			@media screen and (max-width: 440px) {
 				top: 10px;
-				left: 200px;
+				left: 270px;
 			}
 		}
 	}
+}
+
+.attribution {
+	margin-top: 50px;
 }

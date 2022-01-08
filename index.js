@@ -168,7 +168,19 @@ function main(data) {
 						</div>
 						<div class="coments">${element.content}</div>
 					</div>
+					<div class="mobile" id=${element.id}>
+						<div class="mobile-houser">
+							<div class="mobile-counter">
+							<img id="p${element.id}" src="./images/icon-plus.svg" alt="" onclick="counterUp('${element.id}')"/>
+							<div class="count" id="${element.id}">${element.score}</div>
+							<img id="m${element.id}" src="./images/icon-minus.svg" alt="" onclick="counterDown('${element.id}')"/>
+						</div>
+						<div class="mobile-optional">
+								${optional}
+						</div>
+					</div>
 				</div>
+
 			`,
 		);
 
@@ -202,6 +214,17 @@ function main(data) {
 									<span id="re"><strong>@${reply.replyingTo}</strong></span>
 									</div>
 									 ${reply.content}
+								</div>
+							</div>
+							<div class="mobile" id=${reply.id}>
+								<div class="mobile-houser">
+									<div class="mobile-counter">
+									<img id="p${reply.id}" src="./images/icon-plus.svg" alt="" onclick="counterUp('${element.id}')"/>
+									<div class="count" id="${reply.id}">${reply.score}</div>
+									<img id="m${reply.id}" src="./images/icon-minus.svg" alt="" onclick="counterDown('${element.id}')"/>
+								</div>
+								<div class="mobile-optional">
+									${optional}
 								</div>
 							</div>
 						</div>
