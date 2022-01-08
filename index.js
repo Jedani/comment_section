@@ -219,9 +219,9 @@ function main(data) {
 							<div class="mobile" id=${reply.id}>
 								<div class="mobile-houser">
 									<div class="mobile-counter">
-									<img id="p${reply.id}" src="./images/icon-plus.svg" alt="" onclick="counterUp('${element.id}')"/>
+									<img id="p${reply.id}" src="./images/icon-plus.svg" alt="" onclick="counterUp('${reply.id}')"/>
 									<div class="count" id="${reply.id}">${reply.score}</div>
-									<img id="m${reply.id}" src="./images/icon-minus.svg" alt="" onclick="counterDown('${element.id}')"/>
+									<img id="m${reply.id}" src="./images/icon-minus.svg" alt="" onclick="counterDown('${reply.id}')"/>
 								</div>
 								<div class="mobile-optional">
 									${optional}
