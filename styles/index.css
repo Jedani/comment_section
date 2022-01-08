@@ -677,10 +677,17 @@ body {
 .container .wrapper .dynamic .topTwo .onReply #comms {
   font-family: "Rubik", sans-serif;
   margin-top: 10px;
-  width: 500px;
+  width: 490px;
   border-radius: 5px;
   height: 60px;
   padding: 10px;
+}
+
+@media screen and (max-width: 440px) {
+  .container .wrapper .dynamic .topTwo .onReply #comms {
+    width: 240px;
+    height: 65px;
+  }
 }
 
 .container .wrapper .dynamic .topTwo .onReply img {
@@ -698,6 +705,15 @@ body {
   border-radius: 7px;
   color: white;
   bottom: 50%;
+}
+
+@media screen and (max-width: 440px) {
+  .container .wrapper .dynamic .topTwo .onReply #hitReply {
+    position: relative;
+    top: -4px;
+    left: 185px;
+    margin-top: 8px;
+  }
 }
 
 .container .wrapper .dynamic .bottomTwo {
@@ -1234,10 +1250,17 @@ body {
 .container .wrapper .dynamic .bottomTwo .onReply #comms {
   font-family: "Rubik", sans-serif;
   margin-top: 10px;
-  width: 500px;
+  width: 490px;
   border-radius: 5px;
   height: 60px;
   padding: 10px;
+}
+
+@media screen and (max-width: 440px) {
+  .container .wrapper .dynamic .bottomTwo .onReply #comms {
+    width: 240px;
+    height: 65px;
+  }
 }
 
 .container .wrapper .dynamic .bottomTwo .onReply img {
@@ -1255,6 +1278,15 @@ body {
   border-radius: 7px;
   color: white;
   bottom: 50%;
+}
+
+@media screen and (max-width: 440px) {
+  .container .wrapper .dynamic .bottomTwo .onReply #hitReply {
+    position: relative;
+    top: -4px;
+    left: 185px;
+    margin-top: 8px;
+  }
 }
 
 .container .comment_section {
@@ -1293,7 +1325,7 @@ body {
 .container .comment_section #comms {
   font-family: "Rubik", sans-serif;
   margin-top: 10px;
-  width: 500px;
+  width: 490px;
   border-radius: 5px;
   height: 60px;
   padding: 10px;
@@ -1317,6 +1349,15 @@ body {
   border-radius: 7px;
   color: white;
   bottom: 50%;
+}
+
+@media screen and (max-width: 440px) {
+  .container .comment_section #hit {
+    position: relative;
+    top: -4px;
+    left: 185px;
+    margin-top: 8px;
+  }
 }
 
 @media screen and (max-width: 440px) {

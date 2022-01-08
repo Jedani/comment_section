@@ -136,12 +136,18 @@
 	border-radius: 7px;
 	color: white;
 	bottom: 50%;
+	@media screen and (max-width: 440px) {
+		position: relative;
+		top: -4px;
+		left: 185px;
+		margin-top: 8px;
+	}
 }
 
 @mixin comment {
 	font-family: "Rubik", sans-serif;
 	margin-top: 10px;
-	width: 500px;
+	width: 490px;
 	border-radius: 5px;
 	height: 60px;
 	padding: 10px;
@@ -207,6 +213,10 @@
 
 		#comms {
 			@include comment;
+			@media screen and (max-width: 440px) {
+				width: 240px;
+				height: 65px;
+			}
 		}
 
 		img {
